@@ -1,0 +1,17 @@
+{
+  "title": "Наши тренера",
+  "data": [
+    {
+      "title": "Жигульский Роман Александрович",
+      "src": "https://altjiu-jitsu.ru/images/trenera/raz.jpg",
+      "subtitle": "3 дан, Президент АКФД ",
+      "phone": "+79132134067"
+    },
+    {
+      "title": "Дикун Алексей Леонидович",
+      "src": "https://altjiu-jitsu.ru/images/trenera/ald.jpg",
+      "subtitle": "1 дан, старший тренер сборной Алтайского края",
+      "phone": "+79132511373"
+    }
+  ]
+}

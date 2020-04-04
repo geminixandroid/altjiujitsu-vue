@@ -1,0 +1,30 @@
+{
+  "title": "Наши партнеры",
+  "data": [
+    {
+      "title": "Уральский Будокан",
+      "src": "https://altjiu-jitsu.ru/images/partners/uralbudokan.jpg",
+      "link": "http://www.uralbudokan.ru/"
+    },
+    {
+      "title": "Российская Федерация Джиу-Джитсу",
+      "src": "http://www.rjf.ru/sites/default/files/logo.png",
+      "link": "http://www.rjf.ru"
+    },
+    {
+      "title": "Алтайский региональный центр айкидо",
+      "src": "http://www.singitai.ru/templates/rt_hexeris/images/logo/logo.png",
+      "link": "http://www.singitai.ru"
+    },
+    {
+      "title": "Федерация джиу-джитсу Свердловской области",
+      "src": "http://www.jj-ur.ru/public/images/logo.png",
+      "link": "http://www.jj-ur.ru"
+    },
+    {
+      "title": "Управление Алтайского края по физической культуре и спорту",
+      "src": "https://altjiu-jitsu.ru/images/partners/aks.jpg",
+      "link": "http://www.altaisport.ru/"
+    }
+  ]
+}
