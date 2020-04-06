@@ -17,32 +17,32 @@
         </v-dialog>
         <v-row align="center" justify="center">
             <v-col cols="12" md="3"  sm="6" v-for="(card) in cards" :key="card.title">
-                <v-card width="300px" class="ma-auto" >
+                <v-card width="300px" min-height="250px" class="ma-auto" >
                     <v-list-item three-line>
                         <v-list-item-content  class="text-center ">
                             <v-list-item-title class="mb-1 ">{{card.title}}</v-list-item-title>
                             <v-img
 
                                     :src="card.src"
+                                    lazy-src="@/assets/lazy.png"
                                     height="200"
                                     width="200"
                                     contain
                                     @click="showMenu(card.title,card.regals)"
                             >
-
                             </v-img>
                             <v-list-item v-if="card.subtitle">
-                                <v-list-item-subtitle>
-                                    {{card.subtitle}}
+                                <v-list-item-subtitle v-html="card.subtitle">
+
                                 </v-list-item-subtitle>
 
                             </v-list-item>
                         </v-list-item-content>
                     </v-list-item>
-                    <v-card-actions v-if="card.phone">
-                        <v-btn :href="`tel:${card.phone}`" color="primary" class="black--text">
+                    <v-card-actions>
+                        <v-btn v-if="card.phone" :href="`tel:${card.phone}`" color="primary" class="black--text">
                             <v-icon left>mdi-phone</v-icon>
-                            {{card.phone}}
+                            позвонить
                         </v-btn>
                     </v-card-actions>
                 </v-card>

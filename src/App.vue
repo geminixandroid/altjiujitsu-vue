@@ -40,21 +40,18 @@
               href="https://vk.com/altayjiujitsu"
               target="_blank"
               icon
-      >
-        <v-icon >mdi-vk</v-icon>
+      ><v-icon >mdi-vk</v-icon>
       </v-btn>
       <v-btn
               href="https://ok.ru/altjiujitsu"
               target="_blank"
               icon
-      >
-        <v-icon>mdi-odnoklassniki</v-icon>
+      ><v-icon>mdi-odnoklassniki</v-icon>
       </v-btn>
       <v-btn
               href="mailto:altai.jiujitsu@gmail.com"
               icon
-      >
-        <v-icon>mdi-gmail</v-icon>
+      ><v-icon>mdi-gmail</v-icon>
       </v-btn>
     </v-app-bar>
 

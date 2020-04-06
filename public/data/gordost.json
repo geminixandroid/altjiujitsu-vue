@@ -3,73 +3,73 @@
   "data": [
     {
       "title": "Дегтярёв Иван",
-      "src": "https://altjiu-jitsu.ru/images/pride/di.jpg",
+      "src": "./img/gordost/di.jpg",
       "regals": [
        ]
     },
     {
       "title": "  Глумов Виталий",
-      "src": "https://altjiu-jitsu.ru/images/pride/gv.jpg",
+      "src": "./img/gordost/gv.jpg",
       "regals": [
       ]
     },
     {
       "title": "Шорохов Юрий",
-      "src": "https://altjiu-jitsu.ru/images/pride/su.jpg",
+      "src": "./img/gordost/su.jpg",
       "regals": [
      ]
     },
     {
       "title": "Мазякин Роман",
-      "src": "https://altjiu-jitsu.ru/images/pride/mr.jpg",
+      "src": "./img/gordost/mr.jpg",
       "regals": [
       ]
     },
     {
       "title": "Загороднов Кирилл",
-      "src": "https://altjiu-jitsu.ru/images/pride/zk.jpg",
+      "src": "./img/gordost/zk.jpg",
       "regals": [
      ]
     },
     {
       "title": "Липезин Роман",
-      "src": "https://altjiu-jitsu.ru/images/pride/lr.jpg",
+      "src": "./img/gordost/lr.jpg",
       "regals": [
       ]
     },
     {
       "title": "Лапин Сергей",
-      "src": "https://altjiu-jitsu.ru/images/pride/ls.jpg",
+      "src": "./img/gordost/ls.jpg",
       "regals": [
      ]
     },
     {
       "title": "Степанов Никита",
-      "src": "https://altjiu-jitsu.ru/images/pride/sn.jpg",
+      "src": "./img/gordost/sn.jpg",
       "regals": [
       ]
     },
     {
       "title": "Полетаев Владимир",
-      "src": "https://altjiu-jitsu.ru/images/future/vp.jpg",
+      "src": "./img/gordost/vp.jpg",
       "regals": [
       ]
     },
     {
       "title": "Афанасьев Евгений",
-      "src": "https://altjiu-jitsu.ru/images/future/ea.jpg",
+      "src": "./img/gordost/ea.jpg",
       "regals": [
      ]
     },
     {
       "title": "Булатов Артем",
-      "src": "https://altjiu-jitsu.ru/images/future/ba.jpg",
+      "src": "./img/gordost/ba.jpg",
       "regals": [
      ]
     },
     {
       "title": "Егоров Максим",
-      "src": "https://altjiu-jitsu.ru/images/future/em.jpg",
+      "src": "./img/gordost/em.jpg",
       "regals": [
         "Бронзовый призёр первенства России по джиу-джитсу среди юниоров до 21 года г. Конаково",
         "Победитель Всероссийского турнира \"Звезды России\" Новосибирск 2018 г."
