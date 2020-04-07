@@ -18,9 +18,9 @@
         <v-row align="center" justify="center">
             <v-col cols="12" md="3"  sm="6" v-for="(card) in cards" :key="card.title">
                 <v-card width="300px" min-height="250px" class="ma-auto" >
-                    <v-list-item three-line>
+                    <v-list-item two-line>
                         <v-list-item-content  class="text-center ">
-                            <v-list-item-title class="mb-1 ">{{card.title}}</v-list-item-title>
+                            <v-list-item-title class="mb-1">{{card.title}}</v-list-item-title>
                             <v-img
 
                                     :src="card.src"
@@ -31,12 +31,14 @@
                                     @click="showMenu(card.title,card.regals)"
                             >
                             </v-img>
-                            <v-list-item v-if="card.subtitle">
-                                <v-list-item-subtitle v-html="card.subtitle">
-
-                                </v-list-item-subtitle>
-
-                            </v-list-item>
+                            <v-tooltip bottom>
+                                <template v-slot:activator="{ on }">
+                                    <v-list-item-subtitle v-on="on" class="mt-1" v-if="card.subtitle">
+                                        {{card.subtitle}}
+                                    </v-list-item-subtitle>
+                                </template>
+                                <div style="max-width:300px;" class="text-center" >{{card.subtitle}}</div>
+                            </v-tooltip>
                         </v-list-item-content>
                     </v-list-item>
                     <v-card-actions>
@@ -44,6 +46,8 @@
                             <v-icon left>mdi-phone</v-icon>
                             позвонить
                         </v-btn>
+                        <v-spacer></v-spacer>
+                        <v-btn  icon v-if="card.regals"><v-icon   @click="showMenu(card.title,card.regals)">mdi-dots-vertical</v-icon></v-btn>
                     </v-card-actions>
                 </v-card>
             </v-col>

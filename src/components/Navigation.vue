@@ -118,7 +118,7 @@
                 <v-expansion-panel >
                     <v-expansion-panel-header>Федерация</v-expansion-panel-header>
                     <v-expansion-panel-content>
-                        <v-list-item >Руководство</v-list-item>
+                        <v-list-item to="/cards/rukovodstvo">Руководство</v-list-item>
                         <v-list-item >История</v-list-item>
                     </v-expansion-panel-content>
                 </v-expansion-panel>
