@@ -37,7 +37,7 @@
                                         {{card.subtitle}}
                                     </v-list-item-subtitle>
                                 </template>
-                                <div style="max-width:300px;" class="text-center" >{{card.subtitle}}</div>
+                                <div style="max-width:300px" class="text-center" >{{card.subtitle}}</div>
                             </v-tooltip>
                         </v-list-item-content>
                     </v-list-item>
