@@ -3,7 +3,8 @@
   "data": [
     {
       "title": "Смородников Александр",
-      "src": "",
+      "src": "/data/images/vedushie/smorodnikov_aleksandr.jpg",
+      "subtitle": "1 спортивный разряд",
       "regals": []
     },    {
       "title": "Кириллов Иван",
@@ -49,11 +50,13 @@
       "regals": []
     },    {
       "title": "Сторожева Виктория",
-      "src": "",
+      "src": "/data/images/vedushie/storozheva_viktoria.jpg",
+      "subtitle": "2 спортивный разряд",
       "regals": []
     },    {
       "title": "Куликова Юлия",
-      "src": "",
+      "src": "/data/images/vedushie/kulikova_yulia.jpg",
+      "subtitle": "1 спортивный разряд",
       "regals": []
     }
   ]

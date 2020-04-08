@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify/lib';
 import colors from 'vuetify/lib/util/colors'
+import '@mdi/font/css/materialdesignicons.css';
+import 'vuetify/dist/vuetify.min.css';
 Vue.use(Vuetify);
 export default new Vuetify({
     theme: {
@@ -11,5 +13,8 @@ export default new Vuetify({
                 accent: colors.indigo.base, // #3F51B5
             },
         },
+    },
+    icons: {
+        iconfont: 'mdi', // default - only for display purposes
     },
 });
