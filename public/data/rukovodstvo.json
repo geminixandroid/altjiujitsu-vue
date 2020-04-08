@@ -3,22 +3,22 @@
   "data": [
     {
       "title": "Жигульский Роман Александрович",
-      "src": "./img/rukovodstvo/zra.jpg",
+      "src": "/data/images/rukovodstvo/zra.jpg",
       "subtitle": "Президент АКФД. Старший тренер Сборной Алтайского края взрослые, юниоры до 21 года и до 18 лет. Председатель координационного совета в Сибирском Федеральном округе РФД."
     },
     {
       "title": "Подшивайлов Алексей Андреевич",
-      "src": "./img/rukovodstvo/paa.jpg",
+      "src": "/data/images/rukovodstvo/paa.jpg",
       "subtitle": "Вице-президент АКФД"
     },
     {
       "title": "Дикун Алексей Леонидович",
-      "src": "./img/rukovodstvo/dal.jpg",
+      "src": "/data/images/rukovodstvo/dal.jpg",
       "subtitle": "Член Правления АКФД. Cтарший тренер Сборной Алтайского края, юниоры до 16 лет, юноши и девушки до 14 лет и до 12 лет."
     },
     {
       "title": "Франкив Олег Игоревич",
-      "src": "./img/rukovodstvo/foi.jpg",
+      "src": "/data/images/rukovodstvo/foi.jpg",
       "subtitle": "Председатель коллегии судей АКФД"
     }
   ]

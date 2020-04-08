@@ -3,27 +3,27 @@
   "data": [
     {
       "title": "Уральский Будокан",
-      "src": "./img/partners/uralbudokan.jpg",
+      "src": "/data/images/partners/uralbudokan.jpg",
       "link": "http://www.uralbudokan.ru/"
     },
     {
       "title": "Российская Федерация Джиу-Джитсу",
-      "src": "./img/partners/rjf.png",
+      "src": "/data/images/partners/rjf.png",
       "link": "http://www.rjf.ru"
     },
     {
       "title": "Алтайский региональный центр айкидо",
-      "src": "./img/partners/singitay.png",
+      "src": "/data/images/partners/singitay.png",
       "link": "http://www.singitai.ru"
     },
     {
       "title": "Федерация джиу-джитсу Свердловской области",
-      "src": "./img/partners/jjur.png",
+      "src": "/data/images/partners/jjur.png",
       "link": "http://www.jj-ur.ru"
     },
     {
       "title": "Управление Алтайского края по физической культуре и спорту",
-      "src": "./img/partners/aks.jpg",
+      "src": "/data/images/partners/aks.jpg",
       "link": "http://www.altaisport.ru/"
     }
   ]

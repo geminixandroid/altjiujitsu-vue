@@ -113,6 +113,7 @@
                         <v-list-item >Правила соревнований</v-list-item>
                         <v-list-item >ЕВСК</v-list-item>
                         <v-list-item >Новости</v-list-item>
+                        <v-divider></v-divider>
                     </v-expansion-panel-content>
                 </v-expansion-panel>
                 <v-expansion-panel >
@@ -120,6 +121,7 @@
                     <v-expansion-panel-content>
                         <v-list-item to="/cards/rukovodstvo">Руководство</v-list-item>
                         <v-list-item >История</v-list-item>
+                        <v-divider></v-divider>
                     </v-expansion-panel-content>
                 </v-expansion-panel>
             </v-expansion-panels>

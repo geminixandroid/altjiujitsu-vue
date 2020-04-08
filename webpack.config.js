@@ -3,4 +3,5 @@ module.exports = {
         alias: {
             "@": require("path").resolve(__dirname, "src") // change this to your folder path
         }
-    },};
+    },
+};

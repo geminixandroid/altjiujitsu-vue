@@ -3,73 +3,73 @@
   "data": [
     {
       "title": "Дегтярёв Иван",
-      "src": "./img/gordost/di.jpg",
+      "src": "/data/images/gordost/di.jpg",
       "regals": [
        ]
     },
     {
       "title": "  Глумов Виталий",
-      "src": "./img/gordost/gv.jpg",
+      "src": "/data/images/gordost/gv.jpg",
       "regals": [
       ]
     },
     {
       "title": "Шорохов Юрий",
-      "src": "./img/gordost/su.jpg",
+      "src": "/data/images/gordost/su.jpg",
       "regals": [
      ]
     },
     {
       "title": "Мазякин Роман",
-      "src": "./img/gordost/mr.jpg",
+      "src": "/data/images/gordost/mr.jpg",
       "regals": [
       ]
     },
     {
       "title": "Загороднов Кирилл",
-      "src": "./img/gordost/zk.jpg",
+      "src": "/data/images/gordost/zk.jpg",
       "regals": [
      ]
     },
     {
       "title": "Липезин Роман",
-      "src": "./img/gordost/lr.jpg",
+      "src": "/data/images/gordost/lr.jpg",
       "regals": [
       ]
     },
     {
       "title": "Лапин Сергей",
-      "src": "./img/gordost/ls.jpg",
+      "src": "/data/images/gordost/ls.jpg",
       "regals": [
      ]
     },
     {
       "title": "Степанов Никита",
-      "src": "./img/gordost/sn.jpg",
+      "src": "/data/images/gordost/sn.jpg",
       "regals": [
       ]
     },
     {
       "title": "Полетаев Владимир",
-      "src": "./img/gordost/vp.jpg",
+      "src": "/data/images/gordost/vp.jpg",
       "regals": [
       ]
     },
     {
       "title": "Афанасьев Евгений",
-      "src": "./img/gordost/ea.jpg",
+      "src": "/data/images/gordost/ea.jpg",
       "regals": [
      ]
     },
     {
       "title": "Булатов Артем",
-      "src": "./img/gordost/ba.jpg",
+      "src": "/data/images/gordost/ba.jpg",
       "regals": [
      ]
     },
     {
       "title": "Егоров Максим",
-      "src": "./img/gordost/em.jpg",
+      "src": "/data/images/gordost/em.jpg",
       "regals": [
         "Бронзовый призёр первенства России по джиу-джитсу среди юниоров до 21 года г. Конаково",
         "Победитель Всероссийского турнира \"Звезды России\" Новосибирск 2018 г."

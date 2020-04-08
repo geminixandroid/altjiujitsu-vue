@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import App from './App.vue'
-
-//import './registerServiceWorker'
 import router from './router'
 import VueMeta from 'vue-meta'
 import vuetify from './plugins/vuetify';

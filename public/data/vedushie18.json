@@ -3,7 +3,7 @@
   "data": [
     {
       "title": "Москальчук Климентий",
-      "src": "./img/vedushie/moskalchuk_klimentiy.jpg",
+      "src": "/data/images/vedushie/moskalchuk_klimentiy.jpg",
       "subtitle": "Кандидат в мастера спорта",
       "regals": [
         "Серебряный призёр первенства России г. Санкт-Петербург 2020 г.",
@@ -18,7 +18,7 @@
     },
     {
       "title": "Пучков Олег",
-      "src": "./img/vedushie/puchkov_oleg.jpg",
+      "src": "/data/images/vedushie/puchkov_oleg.jpg",
       "subtitle": "Кандидат в мастера спорта",
       "regals": [
         "Бронзовый призёр первенства России г. Челябинск 2017",
@@ -29,7 +29,7 @@
     },
     {
       "title": "Штраух Сергей",
-      "src": "./img/vedushie/shtrauh_sergey.jpg",
+      "src": "/data/images/vedushie/shtrauh_sergey.jpg",
       "subtitle":"Кандидат в мастера спорта",
       "regals": [
         "Победитель Всероссийского турнира г. Барнаул 2019",
@@ -39,7 +39,7 @@
     },
     {
       "title": "Зиновьев Юрий",
-      "src": "./img/vedushie/zinovyev_yuriy.jpg",
+      "src": "/data/images/vedushie/zinovyev_yuriy.jpg",
       "subtitle":"Кандидат в мастера спорта",
       "regals": [
         "Победитель Всероссийских соревнований \"Кубок Германа Степановича Титова\" г. Барнаул 2020 г.",
@@ -49,7 +49,7 @@
     },
     {
       "title": "Жилин Егор",
-      "src": "./img/vedushie/zhilin_egor.jpg",
+      "src": "/data/images/vedushie/zhilin_egor.jpg",
       "subtitle":"Кандидат в мастера спорта",
       "regals": [
         "Победитель Всероссийского турнира г. Барнаул 2019",
@@ -60,7 +60,7 @@
     },
     {
       "title": "Хмулев Роман",
-      "src": "./img/vedushie/hmulev_roman.jpg",
+      "src": "/data/images/vedushie/hmulev_roman.jpg",
       "subtitle":"Кандидат в мастера спорта",
       "regals": [
         "Победитель первенства Сибирского Федерального округа г. Барнаул 2016 г и 2019 г.",

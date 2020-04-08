@@ -3,25 +3,25 @@
   "data": [
     {
       "title": "Жигульский Роман Александрович",
-      "src": "./img/treners/raz.jpg",
+      "src": "/data/images/treners/raz.jpg",
       "subtitle": "3 дан, Президент АКФД",
       "phone": "+7-913-213-4067"
     },
     {
       "title": "Дикун Алексей Леонидович",
-      "src": "./img/treners/ald.jpg",
+      "src": "/data/images/treners/ald.jpg",
       "subtitle": "1 дан, Cтарший тренер сборной Алтайского края",
       "phone": "+7-913-251-1373"
     },
     {
       "title": "Шорохов Андрей Михайлович",
-      "src": "./img/treners/sam.jpg",
+      "src": "/data/images/treners/sam.jpg",
       "subtitle": "1 дан",
       "phone": "+7-996-303-8620"
     },
     {
       "title": "Шорохов Юрий Михайлович",
-      "src": "./img/treners/sym.jpg",
+      "src": "/data/images/treners/sym.jpg",
       "subtitle": "1 дан",
       "phone": "нет"
     }

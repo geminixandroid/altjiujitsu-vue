@@ -3,37 +3,37 @@
   "data": [
     {
       "title": "Жигульский Роман",
-      "src": "./img/kollegia/zr.jpg",
+      "src": "/data/images/kollegia/zr.jpg",
       "subtitle": "Член коллегии судей РФД,\nВсероссийская категория"
     },
     {
       "title": "Дикун Алексей",
-      "src": "./img/kollegia/dal.jpg",
+      "src": "/data/images/kollegia/dal.jpg",
       "subtitle": "Член коллегии судей РФД, 1 квалификационная категория"
     },
     {
       "title": "Франкив Олег",
-      "src": "./img/kollegia/fo.jpg",
+      "src": "/data/images/kollegia/fo.jpg",
       "subtitle": "Член коллегии судей РФД, 1 квалификационная категория"
     },
     {
       "title": "Шорохов Андрей",
-      "src": "./img/kollegia/sa.jpg",
+      "src": "/data/images/kollegia/sa.jpg",
       "subtitle": "Член коллегии судей АКФД, 1 квалификационная категория"
     },
     {
       "title": "Шорохов Юрий",
-      "src": "./img/kollegia/sy.jpg",
+      "src": "/data/images/kollegia/sy.jpg",
       "subtitle": "Член коллегии судей АКФД, 1 квалификационная категория"
     },
     {
       "title": "Подшивайлов Алексей",
-      "src": "./img/kollegia/pa.jpg",
+      "src": "/data/images/kollegia/pa.jpg",
       "subtitle": "Член коллегии судей АКФД, 1 квалификационная категория"
     },
     {
       "title": "Егоров Максим",
-      "src": "./img/kollegia/em.jpg",
+      "src": "/data/images/kollegia/em.jpg",
       "subtitle": "Член коллегии судей АКФД, 2 квалификационная категория"
     }
   ]
