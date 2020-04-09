@@ -24,6 +24,12 @@
       "src": "/data/images/treners/sym.jpg",
       "subtitle": "1 дан",
       "phone": "нет"
+    },
+    {
+      "title": "Полетаев Владимир Витальевич",
+      "src": "/data/images/treners/pv.jpg",
+      "subtitle": "1 кю, коричневый пояс",
+      "phone": "нет"
     }
   ]
 }
