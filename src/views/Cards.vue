@@ -16,7 +16,7 @@
             </v-card>
         </v-dialog>
         <v-row align="center" justify="center">
-            <v-col cols="12" md="3"  sm="6" v-for="(card) in cards" :key="card.title">
+            <v-col cols="12" md="3"  sm="6" v-for="(card) in cards" :key="card.title+title">
                 <v-card width="300px" min-height="250px" class="ma-auto" >
                     <v-list-item two-line>
                         <v-list-item-content  class="text-center ">
