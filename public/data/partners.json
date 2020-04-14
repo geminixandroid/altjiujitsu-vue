@@ -2,9 +2,24 @@
   "title": "Наши партнеры",
   "data": [
     {
+      "title": "Спортивный клуб \"Темп\" г. Барнаул",
+      "src": "/data/images/partners/temp.jpg",
+      "link": "https://sctemp.ru"
+    },
+    {
+      "title": "МБУ СП СШОР - 3 г. Барнаула",
+      "src": "/data/images/partners/shor.jpg",
+      "link": "http://sdyshor3barnaul.ucoz.net"
+    },
+    {
+      "title": "МБУ СП Поспелихинская Спортивная школа",
+      "src": "/data/images/partners/posp.jpg",
+      "link": "https://duschpsp.ucoz.net"
+    },
+    {
       "title": "Уральский Будокан",
       "src": "/data/images/partners/uralbudokan.jpg",
-      "link": "http://www.uralbudokan.ru/"
+      "link": "http://www.uralbudokan.ru"
     },
     {
       "title": "Российская Федерация Джиу-Джитсу",
@@ -13,18 +28,18 @@
     },
     {
       "title": "Алтайский региональный центр айкидо",
-      "src": "/data/images/partners/singitay.png",
+      "src": "/data/images/partners/singitay.jpg",
       "link": "http://www.singitai.ru"
     },
     {
       "title": "Федерация джиу-джитсу Свердловской области",
-      "src": "/data/images/partners/jjur.png",
+      "src": "/data/images/partners/jjur.jpg",
       "link": "http://www.jj-ur.ru"
     },
     {
       "title": "Управление Алтайского края по физической культуре и спорту",
       "src": "/data/images/partners/aks.jpg",
-      "link": "http://www.altaisport.ru/"
+      "link": "http://www.altaisport.ru"
     }
   ]
 }
