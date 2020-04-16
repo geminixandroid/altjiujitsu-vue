@@ -2,7 +2,7 @@
     <v-list nav dense>
         <v-list-item  to="/" ><v-icon left>mdi-home</v-icon>Главная</v-list-item>
         <!--<v-list-item><v-icon left>mdi-newspaper</v-icon>Новости</v-list-item>-->
-        <v-list-item><v-icon left>mdi-calendar-check</v-icon>Мероприятия</v-list-item>
+        <v-list-item to="/calendar/calendar"><v-icon left>mdi-calendar-check</v-icon>Мероприятия</v-list-item>
         <v-list-item to="/cards/treners"><v-icon left>mdi-human-greeting</v-icon>Наши тренеры</v-list-item>
         <v-list-item to="/cards/gordost"><v-icon left>mdi-human-handsup</v-icon>Гордость федерации</v-list-item>
         <v-list-item to="/partners/partners"><v-icon left>{{handshake}}</v-icon>Партнеры федерации</v-list-item>

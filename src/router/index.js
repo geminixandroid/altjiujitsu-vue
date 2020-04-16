@@ -16,6 +16,9 @@ const routes = [
     {
         path: '/partners/:category', props:true,name: 'Partners',component:() => import (/* webpackChunkName: "partners" */  '../views/Partners')
     },
+    {
+        path: '/calendar/:category', props:true,name: 'Calendar',component:() => import (/* webpackChunkName: "calendar" */  '../views/Calendar')
+    }
 ]
 
 const router = new VueRouter({
