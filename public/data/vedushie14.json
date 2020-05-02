@@ -16,13 +16,10 @@
       "regals": []
     },    {
       "title": "Сивонин Иван",
-      "src": "",
+      "src": "/data/images/vedushie/sivonin_ivan.jpg",
       "regals": []
-    },    {
-      "title": "Иванов Семен",
-      "src": "",
-      "regals": []
-    },    {
+    },
+    {
       "title": "Орехов Максим",
       "src": "/data/images/vedushie/orehov_maxim.jpg",
       "subtitle": "3 спортивный разряд",
@@ -39,20 +36,23 @@
       "regals": []
     },    {
       "title": "Федоскин Николай",
-      "src": "",
+      "src": "/data/images/vedushie/fedoskin_nikolay.jpg",
+      "subtitle": "3 спортивный разряд",
       "regals": []
     },    {
       "title": "Побережнюк Андрей",
-      "src": "",
+      "src": "/data/images/vedushie/poberezhnyuk_andrey.jpg",
+      "subtitle": "1 юношеский спортивный разряд",
       "regals": []
     },    {
       "title": "Пискарь Алина",
       "subtitle": "1 юношеский спортивный разряд",
-      "src": "",
+      "src": "/data/images/vedushie/piskar_alina.jpg",
       "regals": []
     },    {
       "title": "Вайдеман Дарья",
-      "src": "",
+      "subtitle": "1 юношеский спортивный разряд",
+      "src": "/data/images/vedushie/vaydeman_darya.jpg",
       "regals": []
     },    {
       "title": "Сторожева Виктория",

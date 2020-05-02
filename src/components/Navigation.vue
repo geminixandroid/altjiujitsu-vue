@@ -110,7 +110,7 @@
                     <v-expansion-panel-header>Судейство</v-expansion-panel-header>
                     <v-expansion-panel-content>
                         <v-list-item to="/cards/kollegia">Коллегия судей</v-list-item>
-                        <v-list-item >Правила соревнований</v-list-item>
+                        <v-list-item href="/data/jjrules.pdf" target="_blank">Правила соревнований</v-list-item>
                         <v-list-item >ЕВСК</v-list-item>
                         <v-list-item >Новости</v-list-item>
                         <v-divider></v-divider>
@@ -119,7 +119,7 @@
                 <v-expansion-panel >
                     <v-expansion-panel-header>Федерация</v-expansion-panel-header>
                     <v-expansion-panel-content>
-                        <v-list-item to="/cards/rukovodstvo">Руководство</v-list-item>
+                        <v-list-item  to="/cards/rukovodstvo">Руководство</v-list-item>
                         <v-list-item >История</v-list-item>
                         <v-divider></v-divider>
                     </v-expansion-panel-content>

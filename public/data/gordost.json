@@ -32,6 +32,13 @@
      ]
     },
     {
+      "title": "Шорохов Андрей",
+      "src": "/data/images/gordost/shorohov_andrey.jpg",
+      "regals": [
+
+      ]
+    },
+    {
       "title": "Мазякин Роман",
       "src": "/data/images/gordost/mr.jpg",
       "regals": [
@@ -133,6 +140,13 @@
       "regals": [
         "Бронзовый призёр первенства России по джиу-джитсу среди юниоров до 21 года г. Конаково",
         "Победитель Всероссийского турнира \"Звезды России\" Новосибирск 2018 г."
+      ]
+    },
+    {
+      "title": "Шарапов Захар",
+      "src": "/data/images/gordost/sharapov_zahar.jpg",
+      "regals": [
+
       ]
     }
   ]
