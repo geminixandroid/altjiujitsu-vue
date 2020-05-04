@@ -1,0 +1,16 @@
+{
+  "title": "Правила соревнований",
+  "data": [
+    {
+      "title": "Правила",
+      "link": "/data/rules/rules.pdf",
+      "type": "pdf"
+    },
+    {
+      "title": "Маунт",
+      "link": "/data/rules/mount.mp4",
+      "type": "video"
+    }
+
+  ]
+}
