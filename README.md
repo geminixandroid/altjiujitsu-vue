@@ -1,5 +1,7 @@
 # jjvue
 
+https://altjiu-jitsu.ru/
+
 ## Project setup
 ```
 npm install
