@@ -7,10 +7,14 @@
       "type": "pdf"
     },
     {
-      "title": "Маунт",
+      "title": "Файтинг. Начало схватки.",
+      "link": "/data/rules/fighting.mp4",
+      "type": "video"
+    },
+    {
+      "title": "Файтинг 3-й раздел. Удержание.",
       "link": "/data/rules/mount.mp4",
       "type": "video"
     }
-
   ]
 }
