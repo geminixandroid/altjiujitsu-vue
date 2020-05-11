@@ -52,7 +52,7 @@
         },
         methods: {
             load(category) {
-                axios.get(`data/${category}.json`)
+                axios.get(`/data/${category}.json`)
                     .then(response => {
                         console.log(response.data);
                         this.title = response.data.title;

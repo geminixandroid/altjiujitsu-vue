@@ -90,7 +90,7 @@
         },
         methods: {
             load(category) {
-                axios.get(`data/${category}.json`)
+                axios.get(`/data/${category}.json`)
                     .then(response => {
                             this.title = response.data.title;
                             this.cards = response.data.data;
