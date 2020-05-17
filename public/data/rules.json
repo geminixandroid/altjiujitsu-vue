@@ -1,20 +1,60 @@
 {
   "title": "Правила соревнований",
-  "data": [
+  "tabs":[
+    {"tabname": "Файтинг",
+      "tabcontent": [
+        {
+          "title": "Начало схватки",
+          "subtitle": "Файтинг",
+          "link": "/data/rules/fighting_nachalo.mp4"
+        }, {
+          "title": "Оценки Вазари 1 часть",
+          "subtitle": "Файтинг 1 часть",
+          "link": "/data/rules/fighting_1_vazari.mp4"
+        },
+        {
+          "title": "Оценки Иппон 1 часть",
+          "subtitle": "Файтинг 1 часть",
+          "link": "/data/rules/fighting_1_ippon.mp4"
+        },
+        {
+          "title": "Оценки во 2 части",
+          "subtitle": "Файтинг 2 часть",
+          "link": "/data/rules/fighting_2_ocenki.mp4"
+        },
+        {
+          "title": "Оценки Иппон 3 балла в 3 части",
+          "subtitle": "Файтинг 3 часть",
+          "link": "/data/rules/fighting_3_ippon3.mp4"
+        },
+        {
+          "title": "Оценки Иппон 2 балла в 3 части",
+          "subtitle": "Файтинг 3 часть",
+          "link": "/data/rules/fighting_3_uderzganie.mp4"
+        },
+        {
+          "title": "Окончание",
+          "subtitle": "Файтинг",
+          "link": "/data/rules/fighting_okonchanie.mp4.mp4"
+        }
+      ]
+    },
+    {"tabname": "Не-ваза",
+      "tabcontent": [
+
+      ]
+    },
+    {"tabname": "Дуо-систем",
+      "tabcontent": [
+
+      ]
+    }
+  ],
+  "pdfs": [
     {
       "title": "Правила",
-      "link": "/data/rules/rules.pdf",
-      "type": "pdf"
-    },
-    {
-      "title": "Файтинг. Начало схватки.",
-      "link": "/data/rules/fighting.mp4",
-      "type": "video"
-    },
-    {
-      "title": "Файтинг 3-й раздел. Удержание.",
-      "link": "/data/rules/mount.mp4",
-      "type": "video"
+      "link": "/data/rules/rules.pdf"
     }
+
   ]
 }

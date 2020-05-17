@@ -1,19 +1,50 @@
 <template>
     <v-content  class="text-center">
         <h2>{{title}}</h2>
-        <v-card width="400px" flat  class="mx-auto">
-        <v-list>
-            <v-list-item class="mb-2 mt-2" :class="`${index%2===0 ?'grey lighten-3':'grey lighten-2'}`" v-for="(rule,index) in rules" :key="rule.title">
-                <v-list-item-content class="text-center" v-if="rule.type==='video'">
-                    <video class="v-content" controls :src="rule.link"></video>
-                    <span> {{rule.title}} </span>
-                </v-list-item-content>
-                <v-list-item-content class="text-center" v-if="rule.type==='pdf'">
-                    <v-btn outlined :href="rule.link" target="_blank">{{rule.title}} <v-icon right>mdi-download</v-icon></v-btn>
-                </v-list-item-content>
-            </v-list-item>
-        </v-list>
-        </v-card>
+
+            <v-list max-width="400px" class="mx-auto" color="transparent">
+                <v-list-item  class="mb-2 mt-2"   v-for="(pdf) in pdfs" :key="pdf.title">
+                    <v-list-item-content class="text-center" >
+                        <v-btn width="400px" outlined :href="pdf.link" target="_blank">{{pdf.title}} <v-icon right>mdi-download</v-icon></v-btn>
+                    </v-list-item-content>
+                </v-list-item>
+            </v-list>
+
+
+        <v-tabs
+                v-model="tabSwitcher"
+                background-color="primary"
+
+        >
+            <v-tab
+                    v-for="tab in tabs"
+                    :key="tab.tabname"
+
+            >
+
+                {{ tab.tabname }}
+            </v-tab>
+        </v-tabs>
+
+        <v-tabs-items v-model="tabSwitcher">
+            <v-tab-item
+                    v-for="tab in tabs"
+                    :key="tab.tabname"
+            >
+                <v-row align="center" justify="center">
+                    <v-col cols="12" md="3"  sm="6" v-for="(rule) in tab.tabcontent" :key="rule.title">
+                        <v-card elevation="2" width="400px"  class="ma-auto" >
+                            <v-card-title>{{rule.title}}</v-card-title>
+                            <v-card-subtitle align="left">{{rule.subtitle}}</v-card-subtitle>
+                            <v-card-text>
+                                <video class="v-content" controls :src="rule.link"></video>
+                            </v-card-text>
+
+                        </v-card>
+                    </v-col>
+                </v-row>
+            </v-tab-item>
+        </v-tabs-items>
     </v-content>
 </template>
 
@@ -30,7 +61,9 @@
         },
         data: () => ({
            title: '',
-            rules: [],
+            pdfs: [],
+            tabSwitcher: null,
+            tabs:[]
         }),
         metaInfo () {
             return {
@@ -52,7 +85,8 @@
                     .then(response => {
                         console.log(response.data)
                         this.title = response.data.title;
-                        this.rules = response.data.data;
+                        this.pdfs = response.data.pdfs;
+                        this.tabs=response.data.tabs;
                     });
             }
         }
