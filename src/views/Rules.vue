@@ -1,6 +1,13 @@
 <template>
     <v-content class="text-center">
         <h2>{{title}}</h2>
+        <div class="hidden-screen-only">
+            <div v-for="tab in tabs" :key="tab.tabname">
+               <div v-for="content in tab.tabcontent" :key="content.title">
+                   {{content.title}} {{content.link}}
+               </div>
+            </div>
+        </div>
         <v-list max-width="400px" class="mx-auto" color="transparent">
             <v-list-item class="mb-2 mt-2" v-for="(pdf) in pdfs" :key="pdf.title">
                 <v-list-item-content class="text-center">
@@ -26,7 +33,7 @@
         <v-tabs-items v-model="tabSwitcher" >
             <v-tab-item
                     v-for="tab in tabs"
-                    :key="tab.tabname" eager
+                    :key="tab.tabname"
             >
                 <v-row align="center" justify="center">
                     <v-col cols="12" md="3" sm="6" v-for="(rule) in tab.tabcontent" :key="rule.title">
@@ -34,7 +41,7 @@
                             <v-card-title>{{rule.title}}</v-card-title>
                             <v-card-subtitle align="left">{{rule.subtitle}}</v-card-subtitle>
                             <v-card-text>
-                                <video class="v-content" controls :src="rule.link"></video>
+                                <video class="v-content" controls  :src="rule.link"></video>
                             </v-card-text>
 
                         </v-card>
