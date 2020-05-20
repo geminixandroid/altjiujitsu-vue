@@ -161,7 +161,11 @@
     },
     {"tabname": "Не-ваза",
       "tabcontent": [
-
+        {
+          "title": "Начало и окончание схватки",
+          "subtitle": "Не-ваза",
+          "link": "/data/rules/nevaza_nachalo_okonchanie.mp4"
+        }
       ]
     },
     {"tabname": "Дуо-систем",
