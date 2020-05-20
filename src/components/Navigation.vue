@@ -2,17 +2,17 @@
     <v-list nav dense>
         <v-list-item  to="/" ><v-icon left>mdi-home</v-icon>Главная</v-list-item>
         <!--<v-list-item><v-icon left>mdi-newspaper</v-icon>Новости</v-list-item>-->
-        <v-list-item to="/calendar/calendar"><v-icon left>mdi-calendar-check</v-icon>Мероприятия</v-list-item>
-        <v-list-item to="/cards/treners"><v-icon left>mdi-human-greeting</v-icon>Наши тренеры</v-list-item>
-        <v-list-item to="/cards/gordost"><v-icon left>mdi-human-handsup</v-icon>Гордость федерации</v-list-item>
-        <v-list-item to="/partners/partners"><v-icon left>{{handshake}}</v-icon>Партнеры федерации</v-list-item>
+        <v-list-item to="/calendar/calendar.html"><v-icon left>mdi-calendar-check</v-icon>Мероприятия</v-list-item>
+        <v-list-item to="/cards/treners.html"><v-icon left>mdi-human-greeting</v-icon>Наши тренеры</v-list-item>
+        <v-list-item to="/cards/gordost.html"><v-icon left>mdi-human-handsup</v-icon>Гордость федерации</v-list-item>
+        <v-list-item to="/partners/partners.html"><v-icon left>{{handshake}}</v-icon>Партнеры федерации</v-list-item>
         <v-divider></v-divider>
         <v-list-item>
             <v-expansion-panels  flat accordion>
                 <v-expansion-panel>
                     <v-expansion-panel-header >Расписание</v-expansion-panel-header>
                     <v-expansion-panel-content>
-                        <v-list-item to="/raspisanie/raspisanieSHOR">
+                        <v-list-item to="/raspisanie/raspisanieSHOR.html">
                             <v-list-item-content>
                                 <v-list-item-title>
                                     СШОР-3
@@ -22,7 +22,7 @@
                                 </v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
-                        <v-list-item to="/raspisanie/raspisaniePOSP">
+                        <v-list-item to="/raspisanie/raspisaniePOSP.html">
                             <v-list-item-content>
                                 <v-list-item-title>
                                     ПОСПЕЛИХИНСКАЯ ДЮСШ
@@ -32,7 +32,7 @@
                                 </v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
-                        <v-list-item to="/raspisanie/raspisanieTEMP">
+                        <v-list-item to="/raspisanie/raspisanieTEMP.html">
                             <v-list-item-content>
                                 <v-list-item-title>
                                     ТЕМП
@@ -42,7 +42,7 @@
                                 </v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
-                        <v-list-item to="/raspisanie/raspisanieVEGA">
+                        <v-list-item to="/raspisanie/raspisanieVEGA.html">
                             <v-list-item-content>
                                 <v-list-item-title>
                                     ВСК ВЕГА-КРИСТАЛЛ
@@ -52,7 +52,7 @@
                                 </v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
-                        <v-list-item to="/raspisanie/raspisaniePARTIZAN">
+                        <v-list-item to="/raspisanie/raspisaniePARTIZAN.html">
                             <v-list-item-content>
                                 <v-list-item-title>
                                     СПК ПАРТИЗАН
@@ -62,7 +62,7 @@
                                 </v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
-                        <v-list-item to="/raspisanie/raspisanieBER">
+                        <v-list-item to="/raspisanie/raspisanieBER.html">
                             <v-list-item-content>
                                 <v-list-item-title>
                                     КДЦ БЕРЕЗОВСКИЙ
@@ -72,7 +72,7 @@
                                 </v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
-                        <v-list-item to="/raspisanie/raspisanieCHER">
+                        <v-list-item to="/raspisanie/raspisanieCHER.html">
                             <v-list-item-content>
                                 <v-list-item-title>
                                     ДК ЧЕРЕМНИНСКИЙ
@@ -82,7 +82,7 @@
                                 </v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
-                        <v-list-item to="/raspisanie/raspisanieFERR">
+                        <v-list-item to="/raspisanie/raspisanieFERR.html">
                             <v-list-item-content>
                                 <v-list-item-title>
                                     СК FERRUM
@@ -98,19 +98,19 @@
                 <v-expansion-panel>
                     <v-expansion-panel-header>Ведущие спортсмены</v-expansion-panel-header>
                     <v-expansion-panel-content>
-                        <v-list-item to="/cards/vedushie21">до 21 года</v-list-item>
-                        <v-list-item to="/cards/vedushie18">до 18 лет</v-list-item>
-                        <v-list-item to="/cards/vedushie16">до 16 лет</v-list-item>
-                        <v-list-item to="/cards/vedushie14">до 14 лет</v-list-item>
-                        <v-list-item to="/cards/vedushie12">до 12 лет</v-list-item>
+                        <v-list-item to="/cards/vedushie21.html">до 21 года</v-list-item>
+                        <v-list-item to="/cards/vedushie18.html">до 18 лет</v-list-item>
+                        <v-list-item to="/cards/vedushie16.html">до 16 лет</v-list-item>
+                        <v-list-item to="/cards/vedushie14.html">до 14 лет</v-list-item>
+                        <v-list-item to="/cards/vedushie12.html">до 12 лет</v-list-item>
                         <v-divider></v-divider>
                     </v-expansion-panel-content>
                 </v-expansion-panel>
                 <v-expansion-panel >
                     <v-expansion-panel-header>Судейство</v-expansion-panel-header>
                     <v-expansion-panel-content>
-                        <v-list-item to="/cards/kollegia">Коллегия судей</v-list-item>
-                        <v-list-item  to="/rules/rules">Правила соревнований</v-list-item>
+                        <v-list-item to="/cards/kollegia.html">Коллегия судей</v-list-item>
+                        <v-list-item  to="/rules/rules.html">Правила соревнований</v-list-item>
                         <v-list-item >ЕВСК</v-list-item>
                         <v-list-item >Новости</v-list-item>
                         <v-divider></v-divider>
@@ -119,7 +119,7 @@
                 <v-expansion-panel >
                     <v-expansion-panel-header>Федерация</v-expansion-panel-header>
                     <v-expansion-panel-content>
-                        <v-list-item  to="/cards/rukovodstvo">Руководство</v-list-item>
+                        <v-list-item  to="/cards/rukovodstvo.html">Руководство</v-list-item>
                         <v-list-item >История</v-list-item>
                         <v-divider></v-divider>
                     </v-expansion-panel-content>

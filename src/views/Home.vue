@@ -78,6 +78,11 @@
 
         name: 'Home',
         components: {},
+        mounted() {
+            this.$nextTick(()=>{
+                document.dispatchEvent(new Event("x-app-rendered"))
+            })
+        }
     }
 </script>
 <style scoped>

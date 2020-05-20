@@ -1,67 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://altjiu-jitsu.ru/</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/calendar/calendar</loc>
+        <loc>https://altjiu-jitsu.ru/calendar/calendar.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/cards/treners</loc>
+        <loc>https://altjiu-jitsu.ru/cards/treners.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/cards/gordost</loc>
+        <loc>https://altjiu-jitsu.ru/cards/gordost.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/partners/partners</loc>
+        <loc>https://altjiu-jitsu.ru/partners/partners.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/raspisanie/raspisanieSHOR</loc>
+        <loc>https://altjiu-jitsu.ru/raspisanie/raspisanieSHOR.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/raspisanie/raspisaniePOSP</loc>
+        <loc>https://altjiu-jitsu.ru/raspisanie/raspisaniePOSP.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/raspisanie/raspisanieTEMP</loc>
+        <loc>https://altjiu-jitsu.ru/raspisanie/raspisanieTEMP.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/raspisanie/raspisanieVEGA</loc>
+        <loc>https://altjiu-jitsu.ru/raspisanie/raspisanieVEGA.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/raspisanie/raspisaniePARTIZAN</loc>
+        <loc>https://altjiu-jitsu.ru/raspisanie/raspisaniePARTIZAN.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/raspisanie/raspisanieBER</loc>
+        <loc>https://altjiu-jitsu.ru/raspisanie/raspisanieBER.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/raspisanie/raspisanieCHER</loc>
+        <loc>https://altjiu-jitsu.ru/raspisanie/raspisanieCHER.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/raspisanie/raspisanieFERR</loc>
+        <loc>https://altjiu-jitsu.ru/raspisanie/raspisanieFERR.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/cards/vedushie21</loc>
+        <loc>https://altjiu-jitsu.ru/cards/vedushie21.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/cards/vedushie18</loc>
+        <loc>https://altjiu-jitsu.ru/cards/vedushie18.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/cards/vedushie16</loc>
+        <loc>https://altjiu-jitsu.ru/cards/vedushie16.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/cards/vedushie14</loc>
+        <loc>https://altjiu-jitsu.ru/cards/vedushie14.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/cards/kollegia</loc>
+        <loc>https://altjiu-jitsu.ru/cards/kollegia.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/rules/rules</loc>
+        <loc>https://altjiu-jitsu.ru/rules/rules.html</loc>
     </url>
     <url>
-        <loc>https://altjiu-jitsu.ru/cards/rukovodstvo</loc>
+        <loc>https://altjiu-jitsu.ru/cards/rukovodstvo.html</loc>
     </url>
 </urlset>

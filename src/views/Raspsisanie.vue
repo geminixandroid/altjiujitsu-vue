@@ -46,18 +46,24 @@
             }
         },
         created() {
-            console.log(this.category);
+            //console.log(this.category);
             this.load(this.category);
         },
         methods: {
             load(category) {
-                axios.get(`/data/${category}.json`)
+                axios.get(`/data/${category.replace('.html','')}.json`)
                     .then(response => {
-                        console.log(response.data)
+                        //console.log(response.data)
                         this.title = response.data.title;
                         this.days = response.data.data;
                         this.address = response.data.address;
-                    });
+                    }).finally(
+                    ()=>{
+                        this.$nextTick(()=>{
+                            document.dispatchEvent(new Event("x-app-rendered"))
+                        })
+
+                    })
             }
         }
     }

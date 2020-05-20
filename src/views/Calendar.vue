@@ -47,20 +47,25 @@
             }
         },
         created() {
-            console.log(this.category);
+            // console.log(this.category);
             this.load(this.category);
         },
         methods: {
             load(category) {
-                axios.get(`/data/${category}.json`)
+                axios.get(`/data/${category.replace('.html','')}.json`)
                     .then(response => {
-                        console.log(response.data);
+                       // console.log(response.data);
                         this.title = response.data.title;
                         this.calendar = response.data.data;
                        // let finded =this.calendar.findIndex((item) => item.month.toLowerCase() === this.currentMonth);
                        // console.log(this.currentMonth);
                        // this.calendar=this.calendar.slice(finded);
-                    });
+                    }).finally(
+                    ()=>{
+                        this.$nextTick(()=>{
+                            document.dispatchEvent(new Event("x-app-rendered"))
+                        })
+                    })
             }
         }
     }

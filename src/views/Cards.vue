@@ -1,6 +1,6 @@
 <template>
     <v-content >
-        <h2 class="text-center">{{title}}</h2>
+        <h1 class="text-center">{{title}}</h1>
         <v-dialog v-model="isMenuShow" max-width="800px" >
             <v-card class="mx-auto">
                 <v-card-title class=" primary mb-2">{{menuTitle}}<v-spacer></v-spacer><v-btn icon @click="isMenuShow=false"><v-icon >mdi-close</v-icon></v-btn>
@@ -19,6 +19,11 @@
             <v-col cols="12" md="3"  sm="6" v-for="(card) in cards" :key="card.title+title">
                 <v-card width="300px" min-height="250px" class="ma-auto" >
                     <v-list-item two-line>
+                        <v-list-item-content class="hidden-screen-only">
+                            <div v-for="(regal) in card.regals" :key="regal">
+                                &#8226; {{regal}}
+                            </div>
+                        </v-list-item-content>
                         <v-list-item-content  class="text-center ">
                             <v-list-item-title class="mb-1">{{card.title}}</v-list-item-title>
                             <v-img
@@ -85,16 +90,23 @@
             }
         },
         created() {
-            console.log(this.category);
+            //console.log(this.category);
             this.load(this.category);
         },
         methods: {
             load(category) {
-                axios.get(`/data/${category}.json`)
+                axios.get(`/data/${category.replace('.html','')}.json`)
                     .then(response => {
                             this.title = response.data.title;
                             this.cards = response.data.data;
-                    });
+                    }).finally(
+                    ()=>{
+                        this.$nextTick(()=>{
+                            document.dispatchEvent(new Event("x-app-rendered"))
+                        })
+
+                    }
+                )
             },
             showMenu(title, regals) {
                 if (regals) {
