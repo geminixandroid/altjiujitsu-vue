@@ -165,6 +165,46 @@
           "title": "Начало и окончание схватки",
           "subtitle": "Не-ваза",
           "link": "/data/rules/nevaza_nachalo_okonchanie.mp4"
+        },
+        {
+          "title": "Оценки 2 балла (видео 1)",
+          "subtitle": "Не-ваза",
+          "link": "/data/rules/nevaza_ocenki_2_1.mp4"
+        },
+        {
+          "title": "Оценки 2 балла (видео 2)",
+          "subtitle": "Не-ваза",
+          "link": "/data/rules/nevaza_ocenki_2_2.mp4"
+        },
+        {
+          "title": "Оценки 2 балла (видео 3)",
+          "subtitle": "Не-ваза",
+          "link": "/data/rules/nevaza_ocenki_2_3.mp4"
+        },
+        {
+          "title": "Оценки 3 балла",
+          "subtitle": "Не-ваза",
+          "link": "/data/rules/nevaza_ocenki_3_1.mp4"
+        },
+        {
+          "title": "Оценки 4 балла (видео 1)",
+          "subtitle": "Не-ваза",
+          "link": "/data/rules/nevaza_ocenki_4_1.mp4"
+        },
+        {
+          "title": "Оценки 4 балла (видео 2)",
+          "subtitle": "Не-ваза",
+          "link": "/data/rules/nevaza_ocenki_4_2.mp4"
+        },
+        {
+          "title": "Запрещенные действия №1",
+          "subtitle": "Не-ваза",
+          "link": "/data/rules/nevaza_denied1.mp4"
+        },
+        {
+          "title": "Запрещенные действия №2",
+          "subtitle": "Не-ваза",
+          "link": "/data/rules/nevaza_denied2.mp4"
         }
       ]
     },
