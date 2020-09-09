@@ -1,6 +1,5 @@
 <template>
     <v-content class="text-center">
-
                 <v-row>
                     <v-col>
                         <h1 class="font-weight-bold mb-3 text-uppercase">
@@ -8,7 +7,7 @@
                         </h1>
 
                         <img class="animate"
-                             src="@/assets/logo.svg"
+                             src="/img/logo.svg"
                              height="200px"
 
                         />
@@ -74,10 +73,9 @@
 </template>
 
 <script>
-    export default {
+   export default {
 
         name: 'Home',
-        components: {},
         mounted() {
             this.$nextTick(()=>{
                 document.dispatchEvent(new Event("x-app-rendered"))

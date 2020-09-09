@@ -16,7 +16,7 @@
 
         <v-app-bar-nav-icon @click="drawer=!drawer"></v-app-bar-nav-icon>
       <v-img class="mr-2"
-              src="@/assets/logo.svg"
+              src="/img/logo.svg"
               width="32"
               height="32"
               max-width="32"

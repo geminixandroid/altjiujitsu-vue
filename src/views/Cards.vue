@@ -29,7 +29,7 @@
                             <v-img
 
                                     :src="card.src"
-                                    lazy-src="@/assets/lazy.png"
+                                    lazy-src="/img/lazy.png"
                                     height="200"
                                     width="200"
                                     contain

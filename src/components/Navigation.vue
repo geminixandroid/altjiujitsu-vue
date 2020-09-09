@@ -42,10 +42,20 @@
                                 </v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
-                        <v-list-item to="/raspisanie/raspisanieVEGA.html">
+                        <v-list-item to="/raspisanie/raspisaniePITON.html">
                             <v-list-item-content>
                                 <v-list-item-title>
-                                    ВСК ВЕГА-КРИСТАЛЛ
+                                    с\к Питон
+                                </v-list-item-title>
+                                <v-list-item-subtitle>
+                                    г.Барнаул
+                                </v-list-item-subtitle>
+                            </v-list-item-content>
+                        </v-list-item>
+                        <v-list-item to="/raspisanie/raspisanieSINGITAY.html">
+                            <v-list-item-content>
+                                <v-list-item-title>
+                                    Сингитай
                                 </v-list-item-title>
                                 <v-list-item-subtitle>
                                     г.Барнаул
