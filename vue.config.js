@@ -32,7 +32,9 @@ module.exports = {
     if (process.env.NODE_ENV !== 'production') {
       config.plugin('copy').tap(options => {
         let ignore='data/**/*';
+        let ignore_images='img/**/*';
         options[0][0].ignore.push(ignore);
+        options[0][0].ignore.push(ignore_images);
         console.log("\x1b[36m%s\x1b[0m",`ИГНОРИРУЕТСЯ В СБОРКЕ:${ignore}`);
         return options
       })
