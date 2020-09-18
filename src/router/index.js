@@ -17,6 +17,9 @@ const routes = [
         path: '/partners/:category', props:true,name: 'Partners',component:() => import (/* webpackChunkName: "partners" */  '../views/Partners')
     },
     {
+        path: '/antidoping/:category', props:true,name: 'Antidoping',component:() => import (/* webpackChunkName: "partners" */  '../views/Antidoping')
+    },
+    {
         path: '/calendar/:category', props:true,name: 'Calendar',component:() => import (/* webpackChunkName: "calendar" */  '../views/Calendar')
     },
     {

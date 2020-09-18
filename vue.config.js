@@ -4,6 +4,7 @@ const routesPrerender=[
 '/cards/treners',
 '/cards/gordost',
 '/partners/partners',
+  '/antidoping/antidoping',
 '/raspisanie/raspisanieSHOR',
 '/raspisanie/raspisaniePOSP',
 '/raspisanie/raspisanieTEMP',

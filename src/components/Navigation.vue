@@ -6,6 +6,7 @@
         <v-list-item to="/cards/treners.html"><v-icon left>mdi-human-greeting</v-icon>Наши тренеры</v-list-item>
         <v-list-item to="/cards/gordost.html"><v-icon left>mdi-human-handsup</v-icon>Гордость федерации</v-list-item>
         <v-list-item to="/partners/partners.html"><v-icon left>{{handshake}}</v-icon>Партнеры федерации</v-list-item>
+        <v-list-item  to="/antidoping/antidoping.html"><v-icon left>mdi-pill</v-icon>Антидопинг</v-list-item>
         <v-divider></v-divider>
         <v-list-item>
             <v-expansion-panels  flat accordion>
