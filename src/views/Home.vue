@@ -6,7 +6,7 @@
                             алтайская краевая федерация<br>джиу-джитсу
                         </h1>
 
-                        <img class="animate"
+                        <img v-if="startAnimation" class="animate"
                              src="/img/logo.svg"
                              height="200px"
 
@@ -74,11 +74,14 @@
 
 <script>
    export default {
-
+       data: () => ({
+           startAnimation: false,
+       }),
         name: 'Home',
         mounted() {
+           this.startAnimation=true;
             this.$nextTick(()=>{
-                document.dispatchEvent(new Event("x-app-rendered"))
+                document.dispatchEvent(new Event("x-app-rendered"));
             })
         }
     }
