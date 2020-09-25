@@ -33,20 +33,10 @@
                                 </v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
-                        <v-list-item to="/raspisanie/raspisanieTEMP.html">
-                            <v-list-item-content>
-                                <v-list-item-title>
-                                    ТЕМП
-                                </v-list-item-title>
-                                <v-list-item-subtitle>
-                                    г.Барнаул
-                                </v-list-item-subtitle>
-                            </v-list-item-content>
-                        </v-list-item>
                         <v-list-item to="/raspisanie/raspisaniePITON.html">
                             <v-list-item-content>
                                 <v-list-item-title>
-                                    с\к Питон
+                                    СК Питон
                                 </v-list-item-title>
                                 <v-list-item-subtitle>
                                     г.Барнаул
@@ -76,7 +66,7 @@
                         <v-list-item to="/raspisanie/raspisanieBER.html">
                             <v-list-item-content>
                                 <v-list-item-title>
-                                    КДЦ БЕРЕЗОВСКИЙ
+                                    СК Пересвет
                                 </v-list-item-title>
                                 <v-list-item-subtitle>
                                     с.Березовка
@@ -86,7 +76,7 @@
                         <v-list-item to="/raspisanie/raspisanieCHER.html">
                             <v-list-item-content>
                                 <v-list-item-title>
-                                    ДК ЧЕРЕМНИНСКИЙ
+                                    СК Алан
                                 </v-list-item-title>
                                 <v-list-item-subtitle>
                                     с.Черемное
