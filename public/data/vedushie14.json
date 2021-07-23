@@ -2,69 +2,18 @@
   "title": "Ведущие спортсмены до 14 лет",
   "data": [
     {
-      "title": "Смородников Александр",
-      "src": "/data/images/vedushie/smorodnikov_aleksandr.jpg",
-      "subtitle": "1 юношеский спортивный разряд",
-      "regals": [
-        "Бронзовый призёр Первенства России г. Санкт-Петербург 2020 г.",
-        "Победитель Первенства Сибирского Федерального округа г. Барнаул 2019 г."
-      ]
-    },    {
-      "title": "Кириллов Иван",
-      "src": "/data/images/vedushie/kirillov_ivan.jpg",
-      "subtitle": "1 юношеский спортивный разряд",
-      "regals": []
-    },    {
-      "title": "Сивонин Иван",
-      "src": "/data/images/vedushie/sivonin_ivan.jpg",
-      "regals": []
-    },
-    {
-      "title": "Орехов Максим",
-      "src": "/data/images/vedushie/orehov_maxim.jpg",
-      "subtitle": "3 спортивный разряд",
-      "regals": [
-        "Победитель Первенства России г. Санкт-Петербург 2020 г.",
-        "Победитель Всероссийских соревнований \"Кубок Урала\" г. Екатеринбург 2018 г.",
-        "Победитель Первенства Сибирского федерального округа г. Барнаул 2018 г. и 019 г.",
-        "Бронзовый призёр первенства Сибирского Федерального округа г. Барнаул 2015 г."
-      ]
-    },    {
       "title": "Черников Иван",
       "src": "/data/images/vedushie/chernikov_ivan.jpg",
       "subtitle": "1 юношеский спортивный разряд",
       "regals": []
-    },    {
-      "title": "Федоскин Николай",
-      "src": "/data/images/vedushie/fedoskin_nikolay.jpg",
-      "subtitle": "3 спортивный разряд",
-      "regals": []
-    },    {
-      "title": "Побережнюк Андрей",
-      "src": "/data/images/vedushie/poberezhnyuk_andrey.jpg",
-      "subtitle": "1 юношеский спортивный разряд",
-      "regals": []
-    },    {
-      "title": "Пискарь Алина",
-      "subtitle": "1 юношеский спортивный разряд",
-      "src": "/data/images/vedushie/piskar_alina.jpg",
-      "regals": []
-    },    {
+    },
+    {
       "title": "Вайдеман Дарья",
       "subtitle": "1 юношеский спортивный разряд",
       "src": "/data/images/vedushie/vaydeman_darya.jpg",
       "regals": []
-    },    {
-      "title": "Сторожева Виктория",
-      "src": "/data/images/vedushie/storozheva_viktoria.jpg",
-      "subtitle": "1 юношеский спортивный разряд",
-      "regals": []
-    },    {
-      "title": "Куликова Юлия",
-      "src": "/data/images/vedushie/kulikova_yulia.jpg",
-      "subtitle": "1 юношеский спортивный разряд",
-      "regals": []
-    },    {
+    },
+    {
       "title": "Иванов Семен",
       "src": "/data/images/vedushie/ivanov_semen.jpg",
       "subtitle": "1 юношеский спортивный разряд",
