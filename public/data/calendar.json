@@ -5,7 +5,84 @@
         "title": "Чемпионат и Первенство России",
         "start": "2022-01-28",
         "end": "2022-01-31",
-        "extendedProps":{"description" : "г. Конаково"}
+        "extendedProps":{"description" : "г. Санкт-Петербург"}
+      },
+      { 
+        "title": "Алтайская лига джиу-джитсу",
+        "start": "2022-02-06",
+        "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Алтайская лига джиу-джитсу",
+        "start": "2022-02-13",
+        "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Кубок Космонавтов",
+        "start": "2022-02-18",
+        "end": "2022-02-21",
+        "extendedProps":{"description" : "г. Москва"}
+      },
+      { 
+        "title": "Первенство Алтайского края",
+        "start": "2022-02-25",
+        "end": "2022-02-27",
+        "extendedProps":{"description" : "с. Поспелиха"}
+      },
+      { 
+        "title": "Кубок Г.С. Титова",
+        "start": "2022-03-10",
+        "end": "2022-03-14",
+        "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Первенство Европы",
+        "start": "2022-03-23",
+        "end": "2022-03-28",
+        "extendedProps":{"description" : "Греция"}
+      },
+      { 
+        "title": "Алтайская лига джиу-джитсу",
+        "start": "2022-03-20",
+        "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Первенство",
+        "start": "2022-04-03",
+        "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Всероссийский судейский семинар",
+        "start": "2022-04-08",
+        "extendedProps":{"description" : "г. Рязань"}
+      },
+      { 
+        "title": "Кубок России",
+        "start": "2022-04-08",
+        "end": "2022-04-11",
+        "extendedProps":{"description" : "г. Рязань"}
+      },
+      { 
+        "title": "Алтайская лига джиу-джитсу",
+        "start": "2022-04-17",
+        "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Алтайская лига джиу-джитсу",
+        "start": "2022-04-24",
+        "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Мужество",
+        "start": "2022-05-13",
+        "end": "2022-05-17",
+        "extendedProps":{"description" : "г. Екатеринбург"}
+      },
+      { 
+        "title": "Кубок Алтайского края",
+        "start": "2022-05-19",
+        "end": "2022-05-21",
+        "extendedProps":{"description" : "г. Барнаул"}
       }
     ]
 }
