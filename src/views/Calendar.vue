@@ -1,76 +1,131 @@
 <template>
-    <v-content  class="text-center">
-        <h2>{{title}}</h2>
-        <template v-for="(item,index) in calendar">
-            <div :key="item.month">
-            <v-row class="ma-0 mb-2" align="center" :class="`${index%2===0 ?'primary darken-1':'primary lighten-1'}`"  justify="center"  >
-                <v-col cols="9"  md="3" >{{item.month}}</v-col>
-                <v-col cols="12"  md="6" class="pb-0 pt-0">
-
-                        <v-row align="center" :class="`${index%2===0 ?'grey lighten-3':'grey lighten-2'}`"  justify="center" :key="event.name" v-for="(event,index) in item.events">
-                            <v-col>{{event.time}} </v-col> <v-col >{{event.name}}</v-col>
-                        </v-row>
-                </v-col>
-            </v-row>
-            </div>
-        </template>
-
-    </v-content>
+  <v-main class="text-center">
+    <h2>{{ title }}</h2>
+    <div class="pa-2">
+      <FullCalendar :options="calendarOptions" />
+    </div>
+    <v-dialog v-model="showInfo" max-width="500px">
+      <v-card class="mx-auto">
+        <v-card-title class="primary mb-2"
+          >{{ event.title }}<v-spacer></v-spacer
+          ><v-btn icon @click="showInfo = false"
+            ><v-icon>mdi-close</v-icon></v-btn
+          >
+        </v-card-title>
+        <v-card-text>
+          {{ getDateStart(event.start) }}
+          {{ getDateEnd(event.end) }}
+          <br />
+          {{ event.extendedProps.description }}
+        </v-card-text>
+        <v-card-actions>
+          <v-btn text @click="showInfo = false"
+            ><v-icon left>mdi-close</v-icon>закрыть</v-btn
+          >
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+  </v-main>
 </template>
 
 <script>
-    import axios from 'axios'
+import axios from "axios";
+import "@fullcalendar/core/vdom";
+import FullCalendar from "@fullcalendar/vue";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import interactionPlugin from "@fullcalendar/interaction";
 
-    export default {
-        name: "Raspisanie",
-        props: {
-            category: {
-                type: String,
-                required: true
+export default {
+  name: "Raspisanie",
+  components: {
+    FullCalendar,
+  },
+  props: {
+    category: {
+      type: String,
+      required: true,
+    },
+  },
+  computed: {
+    calendarOptions() {
+      return {
+        eventClick: this.eventClickInfo,
+        events: this.events,
+        headerToolbar: this.$vuetify.breakpoint.xsOnly
+          ? {
+              start: "today",
+              center: "",
+              end: "prev,next",
             }
-        },
-        data: () => ({
-            dialog: false,
-            title: '',
-            address: '',
-            calendar: [],
-            //currentMonth: new Date().toLocaleString('ru', { month: 'long' })
-        }),
-        metaInfo () {
-            return {
-                title: this.title
-            }
-        },
-        watch: {
-            category: function (newVal) { // watch it
-                this.load(newVal)
-            }
-        },
-        created() {
-            // console.log(this.category);
-            this.load(this.category);
-        },
-        methods: {
-            load(category) {
-                axios.get(`/data/${category.replace('.html','')}.json`)
-                    .then(response => {
-                       // console.log(response.data);
-                        this.title = response.data.title;
-                        this.calendar = response.data.data;
-                       // let finded =this.calendar.findIndex((item) => item.month.toLowerCase() === this.currentMonth);
-                       // console.log(this.currentMonth);
-                       // this.calendar=this.calendar.slice(finded);
-                    }).finally(
-                    ()=>{
-                        this.$nextTick(()=>{
-                            document.dispatchEvent(new Event("x-app-rendered"))
-                        })
-                    })
-            }
-        }
-    }
+          : {
+              start: "title",
+              center: "",
+              end: "today,prev,next",
+            },
+        height: "auto",
+        plugins: [dayGridPlugin, interactionPlugin],
+        initialView: "dayGridMonth",
+        locale: "ru",
+        buttonText: { today: "Сегодня" },
+      };
+    },
+  },
+  data: () => ({
+    dialog: false,
+    title: "",
+    address: "",
+    events: [],
+    showInfo: false,
+    event: { title: "", extendedProps: {}, start: "", end: "" },
+  }),
+  metaInfo() {
+    return {
+      title: this.title,
+    };
+  },
+  watch: {
+    category: function (newVal) {
+      this.load(newVal);
+    },
+  },
+  created() {
+    this.load(this.category);
+  },
+  methods: {
+    getDateStart(date) {
+      if (date) return new Date(date).toLocaleDateString();
+      return "";
+    },
+    getDateEnd(date) {
+      if (date) {
+        const newDate = new Date(date);
+        newDate.setDate(newDate.getDate() - 1);
+        return `- ${newDate.toLocaleDateString()}`;
+      }
+      return "";
+    },
+    eventClickInfo(info) {
+      this.event = info.event;
+      this.showInfo = true;
+    },
+    load(category) {
+      axios
+        .get(`/data/${category.replace(".html", "")}.json`)
+        .then((response) => {
+          this.title = response.data.title;
+          this.events = response.data.events;
+        })
+        .finally(() => {
+          this.$nextTick(() => {
+            document.dispatchEvent(new Event("x-app-rendered"));
+          });
+        });
+    },
+  },
+};
 </script>
-
-<style scoped>
-
+<style>
+.fc-button {
+  display: flex !important;
+}
 </style>

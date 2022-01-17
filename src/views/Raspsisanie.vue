@@ -1,5 +1,5 @@
 <template>
-    <v-content  class="text-center">
+    <v-main  class="text-center">
         <h2>{{title}}</h2>
         {{address}}
         <template v-for="(day,index) in days">
@@ -15,7 +15,7 @@
             </div>
         </template>
 
-    </v-content>
+    </v-main>
 </template>
 
 <script>

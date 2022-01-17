@@ -1,5 +1,5 @@
 <template>
-    <v-content class="text-center">
+    <v-main class="text-center">
                 <v-row>
                     <v-col>
                         <h1 class="font-weight-bold mb-3 text-uppercase">
@@ -69,7 +69,7 @@
         </v-card>
         </v-col>
         </v-row>
-    </v-content>
+    </v-main>
 </template>
 
 <script>

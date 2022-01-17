@@ -1,5 +1,5 @@
 <template>
-    <v-content class="text-center">
+    <v-main class="text-center">
         <h2>{{title}}</h2>
         <div class="hidden-screen-only">
             <div v-for="tab in tabs" :key="tab.tabname">
@@ -41,7 +41,7 @@
                             <v-card-title>{{rule.title}}</v-card-title>
                             <v-card-subtitle align="left">{{rule.subtitle}}</v-card-subtitle>
                             <v-card-text>
-                                <video class="v-content" controls  :src="rule.link"></video>
+                                <video class="v-main" controls  :src="rule.link"></video>
                             </v-card-text>
 
                         </v-card>
@@ -49,7 +49,7 @@
                 </v-row>
             </v-tab-item>
         </v-tabs-items>
-    </v-content>
+    </v-main>
 </template>
 
 <script>

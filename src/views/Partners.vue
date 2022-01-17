@@ -1,5 +1,5 @@
 <template>
-    <v-content  class="text-center">
+    <v-main  class="text-center">
         <h2>{{title}}</h2>
         <v-card width="400px" flat  class="mx-auto">
         <v-list>
@@ -16,7 +16,7 @@
             </v-list-item>
         </v-list>
         </v-card>
-    </v-content>
+    </v-main>
 </template>
 
 <script>

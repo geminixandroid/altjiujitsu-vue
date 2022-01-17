@@ -1,5 +1,5 @@
 <template>
-    <v-content >
+    <v-main >
         <h1 class="text-center">{{title}}</h1>
         <v-dialog v-model="isMenuShow" max-width="800px" >
             <v-card class="mx-auto">
@@ -57,7 +57,7 @@
                 </v-card>
             </v-col>
         </v-row>
-    </v-content>
+    </v-main>
 </template>
 
 <script>
