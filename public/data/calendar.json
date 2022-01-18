@@ -83,6 +83,96 @@
         "start": "2022-05-19",
         "end": "2022-05-21",
         "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Кубок Алтая",
+        "start": "2022-05-20",
+        "end": "2022-05-23",
+        "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Алтайская лига джиу-джитсу",
+        "start": "2022-05-29",
+        "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Чемпионат Европы",
+        "start": "2022-05-26",
+        "end": "2022-05-30",
+        "extendedProps":{"description" : "г. Нагария"}
+      },
+      { 
+        "title": "УТС",
+        "start": "2022-07-24",
+        "end": "2022-08-08",
+        "extendedProps":{"description" : "Красногорский район, с. Новозыково"}
+        
+      },
+      { 
+        "title": "Чемпионат города",
+        "start": "2022-09-17",
+        "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Первенство города",
+        "start": "2022-09-18",
+        "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Чемпионат и первенство Алтайского края",
+        "start": "2022-10-01",
+        "end": "2022-10-03",
+        "extendedProps":{"description" : "с. Поспелиха"}
+      },
+      { 
+        "title": "Алтайская лига джиу-джитсу",
+        "start": "2022-10-09",
+        "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Алтайская лига джиу-джитсу",
+        "start": "2022-10-16",
+        "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Чемпионат СФО",
+        "start": "2022-11-03",
+        "end": "2022-11-05",
+        "extendedProps":{"description" : "г. Барнаул"}
+      },
+      { 
+        "title": "Первенство СФО",
+        "start": "2022-11-04",
+        "end": "2022-11-07",
+        "extendedProps":{"description" : "г. Барнаул"}
+      }, 
+      { 
+        "title": "Кубок Урала",
+        "start": "2022-11-18",
+        "end": "2022-11-21",
+        "extendedProps":{"description" : "г. Екатеринбург"}
+      }, 
+      { 
+        "title": "Первенство Алтайского края",
+        "start": "2022-11-12",
+        "end": "2022-11-14",
+        "extendedProps":{"description" : "с. Поспелиха"}
+      },
+      { 
+        "title": "Первенство СФО",
+        "start": "2022-12-02",
+        "end": "2022-12-05",
+        "extendedProps":{"description" : "г. Иркутск"}
+      },
+      { 
+        "title": "Первенство МБУ СП \"ПСШ\"",
+        "start": "2022-12-17",
+        "extendedProps":{"description" : "с. Поспелиха"}
+      },
+      { 
+        "title": "Первенство МБУ СП \"СШ-10\"",
+        "start": "2022-12-18",
+        "extendedProps":{"description" : "г. Барнаул"}
       }
     ]
 }

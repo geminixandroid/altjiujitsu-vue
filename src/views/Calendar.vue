@@ -109,7 +109,7 @@ export default {
     },
     load(category) {
       axios
-        .get(`/data/${category.replace(".html", "")}.json`)
+        .get(`/data/${category.replace(".html", "")}.json?timestamp=${Date.now()}`)
         .then((response) => {
           this.title = response.data.title;
           this.events = response.data.events;

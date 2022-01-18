@@ -42,7 +42,7 @@
         },
         methods: {
             load(category) {
-                axios.get(`/data/${category.replace('.html','')}.json`)
+                axios.get(`/data/${category.replace('.html','')}.json?timestamp=${Date.now()}`)
                     .then(response => {
                         // console.log(response.data)
                         this.title = response.data.title;
