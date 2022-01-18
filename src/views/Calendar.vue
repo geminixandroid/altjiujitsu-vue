@@ -6,11 +6,15 @@
     </div>
     <v-dialog v-model="showInfo" max-width="500px">
       <v-card class="mx-auto">
-        <v-card-title class="primary mb-2"
-          >{{ event.title }}<v-spacer></v-spacer
-          ><v-btn icon @click="showInfo = false"
-            ><v-icon>mdi-close</v-icon></v-btn
-          >
+        <v-card-title class="primary mb-2">
+          <v-row>
+            <v-col style="word-break: normal;">{{ event.title }}</v-col>
+            <v-col cols=auto>
+              <v-btn icon @click="showInfo = false">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+            </v-col>
+          </v-row>
         </v-card-title>
         <v-card-text>
           {{ getDateStart(event.start) }}
@@ -51,17 +55,12 @@ export default {
       return {
         eventClick: this.eventClickInfo,
         events: this.events,
-        headerToolbar: this.$vuetify.breakpoint.xsOnly
-          ? {
-              start: "today",
-              center: "",
-              end: "prev,next",
-            }
-          : {
-              start: "title",
-              center: "",
-              end: "today,prev,next",
-            },
+        headerToolbar: {
+          start: "title",
+          center: "",
+          end: "today,prev,next",
+        },
+        titleFormat: { year: "numeric", month: "long" },
         height: "auto",
         plugins: [dayGridPlugin, interactionPlugin],
         initialView: "dayGridMonth",
@@ -126,6 +125,12 @@ export default {
 </script>
 <style>
 .fc-button {
+  display: flex !important;
+}
+.fc-toolbar-title {
+  font-size: 1em !important;
+}
+.fc-icon {
   display: flex !important;
 }
 </style>
