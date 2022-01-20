@@ -55,6 +55,7 @@ export default {
       return {
         eventClick: this.eventClickInfo,
         events: this.events,
+        firstDay: 1,
         headerToolbar: {
           start: "title",
           center: "",
