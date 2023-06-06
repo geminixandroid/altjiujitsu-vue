@@ -1,6 +1,6 @@
-# jjvue
+# Сайт АКФД
 
-https://altjiu-jitsu.ru/
+https://акфд.рф
 
 ## Project setup
 ```
