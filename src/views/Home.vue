@@ -76,14 +76,14 @@ export default {
   data: () => ({
     startAnimation: false,
   }),
-  name: "Home",
+  name: 'Home',
   mounted() {
-    this.startAnimation = true;
+    this.startAnimation = true
     this.$nextTick(() => {
-      document.dispatchEvent(new Event("x-app-rendered"));
-    });
+      document.dispatchEvent(new Event('x-app-rendered'))
+    })
   },
-};
+}
 </script>
 <style scoped>
 @keyframes bounceIn {

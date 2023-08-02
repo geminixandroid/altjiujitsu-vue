@@ -26,10 +26,10 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios'
 
 export default {
-  name: "Partners",
+  name: 'Partners',
   props: {
     category: {
       type: String,
@@ -37,38 +37,40 @@ export default {
     },
   },
   data: () => ({
-    title: "",
+    title: '',
     partners: [],
   }),
   metaInfo() {
     return {
       title: this.title,
-    };
+    }
   },
   watch: {
     category: function (newVal) {
-      this.load(newVal);
+      this.load(newVal)
     },
   },
   created() {
-    this.load(this.category);
+    this.load(this.category)
   },
   methods: {
     load(category) {
       axios
-        .get(`/data/${category.replace(".html", "")}.json?timestamp=${Date.now()}`)
+        .get(
+          `/data/${category.replace('.html', '')}.json?timestamp=${Date.now()}`,
+        )
         .then((response) => {
-          this.title = response.data.title;
-          this.partners = response.data.data;
+          this.title = response.data.title
+          this.partners = response.data.data
         })
         .finally(() => {
           this.$nextTick(() => {
-            document.dispatchEvent(new Event("x-app-rendered"));
-          });
-        });
+            document.dispatchEvent(new Event('x-app-rendered'))
+          })
+        })
     },
   },
-};
+}
 </script>
 
 <style scoped></style>

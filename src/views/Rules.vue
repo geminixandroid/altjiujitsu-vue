@@ -25,7 +25,7 @@
     </v-tabs>
     <v-tabs-items v-model="tabSwitcher">
       <v-tab-item v-for="tab in tabs" :key="tab.tabname">
-        <v-row align="center" justify="center">
+        <v-row justify="center">
           <v-col
             cols="12"
             md="3"
@@ -35,7 +35,7 @@
           >
             <v-card elevation="2" width="400px" class="ma-auto">
               <v-card-title>{{ rule.title }}</v-card-title>
-              <v-card-subtitle align="left">{{
+              <v-card-subtitle class="text-left">{{
                 rule.subtitle
               }}</v-card-subtitle>
               <v-card-text>
@@ -50,10 +50,10 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios'
 
 export default {
-  name: "Rules",
+  name: 'Rules',
   props: {
     category: {
       type: String,
@@ -61,7 +61,7 @@ export default {
     },
   },
   data: () => ({
-    title: "",
+    title: '',
     pdfs: [],
     tabSwitcher: null,
     tabs: [],
@@ -69,33 +69,35 @@ export default {
   metaInfo() {
     return {
       title: this.title,
-    };
+    }
   },
   watch: {
     category: function (newVal) {
-      this.load(newVal);
+      this.load(newVal)
     },
   },
   created() {
-    this.load(this.category);
+    this.load(this.category)
   },
   methods: {
     load(category) {
       axios
-        .get(`/data/${category.replace(".html", "")}.json?timestamp=${Date.now()}`)
+        .get(
+          `/data/${category.replace('.html', '')}.json?timestamp=${Date.now()}`,
+        )
         .then((response) => {
-          this.title = response.data.title;
-          this.pdfs = response.data.pdfs;
-          this.tabs = response.data.tabs;
+          this.title = response.data.title
+          this.pdfs = response.data.pdfs
+          this.tabs = response.data.tabs
         })
         .finally(() => {
           this.$nextTick(() => {
-            document.dispatchEvent(new Event("x-app-rendered"));
-          });
-        });
+            document.dispatchEvent(new Event('x-app-rendered'))
+          })
+        })
     },
   },
-};
+}
 </script>
 
 <style scoped></style>

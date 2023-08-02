@@ -21,7 +21,7 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-    <v-row align="center" justify="center">
+    <v-row justify="center">
       <v-col
         cols="12"
         md="3"
@@ -89,10 +89,10 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios'
 
 export default {
-  name: "Cards",
+  name: 'Cards',
   props: {
     category: {
       type: String,
@@ -101,50 +101,52 @@ export default {
   },
   data: () => ({
     dialog: false,
-    title: "",
+    title: '',
     cards: [],
     isMenuShow: false,
-    menuTitle: "",
+    menuTitle: '',
     menuRegals: [],
   }),
   metaInfo() {
     return {
       title: this.title,
-    };
+    }
   },
   watch: {
     category: function (newVal) {
       // watch it
-      this.load(newVal);
+      this.load(newVal)
     },
   },
   created() {
     //console.log(this.category);
-    this.load(this.category);
+    this.load(this.category)
   },
   methods: {
     load(category) {
       axios
-        .get(`/data/${category.replace(".html", "")}.json?timestamp=${Date.now()}`)
+        .get(
+          `/data/${category.replace('.html', '')}.json?timestamp=${Date.now()}`,
+        )
         .then((response) => {
-          this.title = response.data.title;
-          this.cards = response.data.data;
+          this.title = response.data.title
+          this.cards = response.data.data
         })
         .finally(() => {
           this.$nextTick(() => {
-            document.dispatchEvent(new Event("x-app-rendered"));
-          });
-        });
+            document.dispatchEvent(new Event('x-app-rendered'))
+          })
+        })
     },
     showMenu(title, regals) {
       if (regals) {
-        this.isMenuShow = true;
-        this.menuTitle = title;
-        this.menuRegals = regals;
+        this.isMenuShow = true
+        this.menuTitle = title
+        this.menuRegals = regals
       }
     },
   },
-};
+}
 </script>
 
 <style scoped></style>

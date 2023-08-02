@@ -8,8 +8,8 @@
       <v-card class="mx-auto">
         <v-card-title class="primary mb-2">
           <v-row>
-            <v-col style="word-break: normal;">{{ event.title }}</v-col>
-            <v-col cols=auto>
+            <v-col style="word-break: normal">{{ event.title }}</v-col>
+            <v-col cols="auto">
               <v-btn icon @click="showInfo = false">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
@@ -33,14 +33,13 @@
 </template>
 
 <script>
-import axios from "axios";
-import "@fullcalendar/core/vdom";
-import FullCalendar from "@fullcalendar/vue";
-import dayGridPlugin from "@fullcalendar/daygrid";
-import interactionPlugin from "@fullcalendar/interaction";
+import axios from 'axios'
+import FullCalendar from '@fullcalendar/vue'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import interactionPlugin from '@fullcalendar/interaction'
 
 export default {
-  name: "Raspisanie",
+  name: 'Raspisanie',
   components: {
     FullCalendar,
   },
@@ -57,72 +56,74 @@ export default {
         events: this.events,
         firstDay: 1,
         headerToolbar: {
-          start: "title",
-          center: "",
-          end: "today,prev,next",
+          start: 'title',
+          center: '',
+          end: 'today,prev,next',
         },
-        titleFormat: { year: "numeric", month: "long" },
-        height: "auto",
+        titleFormat: { year: 'numeric', month: 'long' },
+        height: 'auto',
         plugins: [dayGridPlugin, interactionPlugin],
-        initialView: "dayGridMonth",
-        locale: "ru",
-        buttonText: { today: "Сегодня" },
-      };
+        initialView: 'dayGridMonth',
+        locale: 'ru',
+        buttonText: { today: 'Сегодня' },
+      }
     },
   },
   data: () => ({
     dialog: false,
-    title: "",
-    address: "",
+    title: '',
+    address: '',
     events: [],
     showInfo: false,
-    event: { title: "", extendedProps: {}, start: "", end: "" },
+    event: { title: '', extendedProps: {}, start: '', end: '' },
   }),
   metaInfo() {
     return {
       title: this.title,
-    };
+    }
   },
   watch: {
     category: function (newVal) {
-      this.load(newVal);
+      this.load(newVal)
     },
   },
   created() {
-    this.load(this.category);
+    this.load(this.category)
   },
   methods: {
     getDateStart(date) {
-      if (date) return new Date(date).toLocaleDateString();
-      return "";
+      if (date) return new Date(date).toLocaleDateString()
+      return ''
     },
     getDateEnd(date) {
       if (date) {
-        const newDate = new Date(date);
-        newDate.setDate(newDate.getDate() - 1);
-        return `- ${newDate.toLocaleDateString()}`;
+        const newDate = new Date(date)
+        newDate.setDate(newDate.getDate() - 1)
+        return `- ${newDate.toLocaleDateString()}`
       }
-      return "";
+      return ''
     },
     eventClickInfo(info) {
-      this.event = info.event;
-      this.showInfo = true;
+      this.event = info.event
+      this.showInfo = true
     },
     load(category) {
       axios
-        .get(`/data/${category.replace(".html", "")}.json?timestamp=${Date.now()}`)
+        .get(
+          `/data/${category.replace('.html', '')}.json?timestamp=${Date.now()}`,
+        )
         .then((response) => {
-          this.title = response.data.title;
-          this.events = response.data.events;
+          this.title = response.data.title
+          this.events = response.data.events
         })
         .finally(() => {
           this.$nextTick(() => {
-            document.dispatchEvent(new Event("x-app-rendered"));
-          });
-        });
+            document.dispatchEvent(new Event('x-app-rendered'))
+          })
+        })
     },
   },
-};
+}
 </script>
 <style>
 .fc-button {
