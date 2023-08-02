@@ -1,14 +1,10 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import VueMeta from 'vue-meta'
+//import VueMeta from 'vue-meta'
 import vuetify from './plugins/vuetify'
 
-Vue.config.productionTip = false
-Vue.use(VueMeta)
-new Vue({
-  router,
+createApp(App).use(router).use(vuetify).mount('#app')
 
-  vuetify,
-  render: (h) => h(App),
-}).$mount('#app')
+//Vue.config.productionTip = false
+//Vue.use(VueMeta)

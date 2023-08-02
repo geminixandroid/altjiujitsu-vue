@@ -26,10 +26,12 @@ const routesPrerender = [
 module.exports = {
   transpileDependencies: ['vuetify'],
 
-  chainWebpack: (config) => {
+   chainWebpack: (config) => {
+    return
     // Ignore static api json files for production &amp; test build
     if (process.env.NODE_ENV !== 'production') {
       config.plugin('copy').tap((options) => {
+        console.log(JSON.stringify(options))
         let ignore = 'data/**/*'
         let ignore_images = 'img/**/*'
         options[0][0].ignore.push(ignore)

@@ -14,7 +14,7 @@
         max-height="32"
         contain
       />
-      <v-toolbar-title v-if="$vuetify.breakpoint.xsOnly"> АКФД</v-toolbar-title>
+      <v-toolbar-title v-if="$vuetify.display.xs"> АКФД</v-toolbar-title>
       <v-toolbar-title class="text-uppercase" v-else>
         Алтайская Краевая Федерация Джиу-Джитсу</v-toolbar-title
       >
