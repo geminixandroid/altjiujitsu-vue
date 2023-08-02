@@ -1,7 +1,7 @@
 module.exports = {
-    resolve: {
-        alias: {
-            "@": require("path").resolve(__dirname, "src") // change this to your folder path
-        }
+  resolve: {
+    alias: {
+      '@': require('path').resolve(__dirname, 'src'), // change this to your folder path
     },
-};
+  },
+}
