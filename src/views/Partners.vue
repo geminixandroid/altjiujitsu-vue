@@ -12,13 +12,12 @@
           <v-list-item-avatar color="primary">
             <v-img :src="partner.src" contain></v-img>
           </v-list-item-avatar>
-          <v-list-item-content class="text-center">
-            <div>{{ partner.title }}</div>
-            <div>
-              <a target="_blank" :href="partner.link">{{ partner.link }}</a>
-            </div>
-            <v-divider class="mt-2"></v-divider>
-          </v-list-item-content>
+
+          <div class="text-center">{{ partner.title }}</div>
+          <div>
+            <a target="_blank" :href="partner.link">{{ partner.link }}</a>
+          </div>
+          <v-divider class="mt-2"></v-divider>
         </v-list-item>
       </v-list>
     </v-card>

@@ -43,10 +43,8 @@
     </v-container>
     <v-footer app>
       <v-spacer></v-spacer
-      ><v-btn text class="overline" href="mailto:geminixandroid@gmail.com"
-        >разработан: geminixandroid@gmail.com<v-icon small right
-          >mdi-email-outline</v-icon
-        ></v-btn
+      ><v-btn size="small" text flat href="mailto:geminixandroid@gmail.com"
+        >разработан: geminixandroid@gmail.com</v-btn
       >
     </v-footer>
   </v-app>

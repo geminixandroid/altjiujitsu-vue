@@ -31,39 +31,40 @@
       >
         <v-card width="300px" min-height="250px" class="ma-auto">
           <v-list-item two-line>
-            <v-list-item-content class="hidden-screen-only">
-              <div v-for="regal in card.regals" :key="regal">
-                &#8226; {{ regal }}
-              </div>
-            </v-list-item-content>
-            <v-list-item-content class="text-center">
-              <v-list-item-title class="mb-1">{{
-                card.title
-              }}</v-list-item-title>
-              <v-img
-                :src="card.src"
-                lazy-src="/img/lazy.png"
-                height="200"
-                width="200"
-                contain
-                @click="showMenu(card.title, card.regals)"
-              >
-              </v-img>
-              <v-tooltip bottom>
-                <template v-slot:activator="{ on }">
-                  <v-list-item-subtitle
-                    v-on="on"
-                    class="mt-1"
-                    v-if="card.subtitle"
-                  >
-                    {{ card.subtitle }}
-                  </v-list-item-subtitle>
-                </template>
-                <div style="max-width: 300px" class="text-center">
+            <div
+              v-for="regal in card.regals"
+              :key="regal"
+              class="hidden-screen-only"
+            >
+              &#8226; {{ regal }}
+            </div>
+
+            <v-list-item-title class="mb-1 text-center">{{
+              card.title
+            }}</v-list-item-title>
+            <v-img
+              :src="card.src"
+              lazy-src="/img/lazy.png"
+              height="200"
+              width="200"
+              contain
+              @click="showMenu(card.title, card.regals)"
+            >
+            </v-img>
+            <v-tooltip bottom>
+              <template v-slot:activator="{ on }">
+                <v-list-item-subtitle
+                  v-on="on"
+                  class="mt-1"
+                  v-if="card.subtitle"
+                >
                   {{ card.subtitle }}
-                </div>
-              </v-tooltip>
-            </v-list-item-content>
+                </v-list-item-subtitle>
+              </template>
+              <div style="max-width: 300px" class="text-center">
+                {{ card.subtitle }}
+              </div>
+            </v-tooltip>
           </v-list-item>
           <v-card-actions>
             <v-btn

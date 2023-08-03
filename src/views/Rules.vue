@@ -10,12 +10,15 @@
     </div>
     <v-list max-width="400px" class="mx-auto" color="transparent">
       <v-list-item class="mb-2 mt-2" v-for="pdf in pdfs" :key="pdf.title">
-        <v-list-item-content class="text-center">
-          <v-btn width="400px" outlined :href="pdf.link" target="_blank"
-            >{{ pdf.title }}
-            <v-icon right>mdi-download</v-icon>
-          </v-btn>
-        </v-list-item-content>
+        <v-btn
+          class="text-center"
+          width="400px"
+          outlined
+          :href="pdf.link"
+          target="_blank"
+          >{{ pdf.title }}
+          <v-icon right>mdi-download</v-icon>
+        </v-btn>
       </v-list-item>
     </v-list>
     <v-tabs v-model="tabSwitcher" background-color="primary">
