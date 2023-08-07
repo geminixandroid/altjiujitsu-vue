@@ -1,9 +1,9 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" app width="300px" temporary
-      ><Navigation></Navigation>
+    <v-navigation-drawer v-model="drawer" width="300"
+      ><navigation></navigation>
     </v-navigation-drawer>
-    <v-app-bar app color="primary" hide-on-scroll>
+    <v-app-bar color="primary" scroll-behavior="hide">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-img
         class="mr-2"
@@ -14,12 +14,10 @@
         max-height="32"
         contain
       />
-      <v-toolbar-title v-if="$vuetify.display.xs"> АКФД</v-toolbar-title>
-      <v-toolbar-title class="text-uppercase" v-else>
-        Алтайская Краевая Федерация Джиу-Джитсу</v-toolbar-title
+      <v-toolbar-title v-if="$vuetify.display.smAndDown">АКФД</v-toolbar-title>
+      <v-toolbar-title class="text-uppercase" v-else
+        >Алтайская Краевая Федерация Джиу-Джитсу</v-toolbar-title
       >
-
-      <v-spacer></v-spacer>
       <v-btn
         href="https://instagram.com/altai_jiu_jitsu_federation"
         target="_blank"
@@ -50,23 +48,11 @@
   </v-app>
 </template>
 
-<script>
-import Navigation from './components/Navigation'
+<script setup lang="ts">
+useSeoMeta({
+  title: 'АКФД',
+  titleTemplate: '%s | Алтайская Краевая Федерация Джиу-Джитсу',
+})
 
-export default {
-  name: 'App',
-  metaInfo: {
-    // if no subcomponents specify a metaInfo.title, this title will be used
-    title: 'АКФД',
-    // all titles will be injected into this template
-    titleTemplate: '%s | Алтайская Краевая Федерация Джиу-Джитсу',
-  },
-  components: {
-    Navigation,
-  },
-  data: () => ({
-    drawer: false,
-    //
-  }),
-}
+const drawer = ref(false)
 </script>

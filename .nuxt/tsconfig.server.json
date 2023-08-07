@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "paths": {
+      "#imports": [
+        "C:/GITLAB/altjiujitsu/.nuxt/types/nitro-imports"
+      ],
+      "#paths": [
+        "C:/GITLAB/altjiujitsu/node_modules/nuxt/dist/core/runtime/nitro/paths"
+      ],
+      "~": [
+        "C:/GITLAB/altjiujitsu"
+      ],
+      "~/*": [
+        "C:/GITLAB/altjiujitsu/*"
+      ],
+      "@": [
+        "C:/GITLAB/altjiujitsu"
+      ],
+      "@/*": [
+        "C:/GITLAB/altjiujitsu/*"
+      ],
+      "~~": [
+        "C:/GITLAB/altjiujitsu"
+      ],
+      "~~/*": [
+        "C:/GITLAB/altjiujitsu/*"
+      ],
+      "@@": [
+        "C:/GITLAB/altjiujitsu"
+      ],
+      "@@/*": [
+        "C:/GITLAB/altjiujitsu/*"
+      ],
+      "assets": [
+        "C:/GITLAB/altjiujitsu/assets"
+      ],
+      "public": [
+        "C:/GITLAB/altjiujitsu/public"
+      ],
+      "public/*": [
+        "C:/GITLAB/altjiujitsu/public/*"
+      ]
+    }
+  },
+  "include": [
+    "C:/GITLAB/altjiujitsu/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro.d.ts",
+    "../**/*",
+    "../server/**/*"
+  ]
+}

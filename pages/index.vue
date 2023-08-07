@@ -2,9 +2,6 @@
   <v-main class="text-center">
     <v-row>
       <v-col>
-        <h1 class="font-weight-bold mb-3 text-uppercase">
-          алтайская краевая федерация<br />джиу-джитсу
-        </h1>
         <img class="animate" src="/img/logo.svg" height="200" />
       </v-col>
     </v-row>
