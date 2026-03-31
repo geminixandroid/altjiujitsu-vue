@@ -1,13 +1,11 @@
 <template>
-  <v-main>
+  <div>
     <h1 class="text-center">{{ title }}</h1>
     <v-dialog v-model="isMenuShow" max-width="800px">
       <v-card class="mx-auto">
-        <v-card-title class="primary mb-2"
+        <v-card-title class="bg-primary mb-2 d-flex align-center"
           >{{ menuTitle }}<v-spacer></v-spacer
-          ><v-btn icon @click="isMenuShow = false"
-            ><v-icon>mdi-close</v-icon></v-btn
-          >
+          ><v-icon style="cursor:pointer" @click="isMenuShow = false">mdi-close</v-icon>
         </v-card-title>
         <v-card-text>
           <div v-for="(regal, index) in menuRegals" :key="index">
@@ -15,8 +13,8 @@
           </div>
         </v-card-text>
         <v-card-actions>
-          <v-btn text @click="isMenuShow = false"
-            ><v-icon left>mdi-close</v-icon>закрыть</v-btn
+          <v-btn variant="text" @click="isMenuShow = false"
+            ><v-icon start>mdi-close</v-icon>закрыть</v-btn
           >
         </v-card-actions>
       </v-card>
@@ -29,50 +27,38 @@
         v-for="card in cards"
         :key="card.title + title"
       >
-        <v-card width="300px" min-height="250px" class="ma-auto">
-          <v-list-item two-line>
-            <v-list-item-content class="hidden-screen-only">
-              <div v-for="regal in card.regals" :key="regal">
-                &#8226; {{ regal }}
-              </div>
-            </v-list-item-content>
-            <v-list-item-content class="text-center">
-              <v-list-item-title class="mb-1">{{
-                card.title
-              }}</v-list-item-title>
-              <v-img
-                :src="card.src"
-                lazy-src="/img/lazy.png"
-                height="200"
-                width="200"
-                contain
-                @click="showMenu(card.title, card.regals)"
-              >
-              </v-img>
-              <v-tooltip bottom>
-                <template v-slot:activator="{ on }">
-                  <v-list-item-subtitle
-                    v-on="on"
-                    class="mt-1"
-                    v-if="card.subtitle"
-                  >
-                    {{ card.subtitle }}
-                  </v-list-item-subtitle>
-                </template>
-                <div style="max-width: 300px" class="text-center">
+        <v-card width="300px" min-height="250px" class="ma-auto d-flex flex-column">
+          <div class="d-none">
+            <div v-for="regal in card.regals" :key="regal">&#8226; {{ regal }}</div>
+          </div>
+          <div class="text-center pa-3 flex-grow-1">
+            <div class="text-subtitle-2 text-truncate mb-1">{{ card.title }}</div>
+            <v-img
+              :src="card.src"
+              lazy-src="/img/lazy.png"
+              height="200"
+              width="200"
+              class="mx-auto"
+              contain
+              @click="showMenu(card.title, card.regals)"
+            />
+            <v-tooltip v-if="card.subtitle" :text="card.subtitle" location="bottom">
+              <template v-slot:activator="{ props }">
+                <div v-bind="props" class="mt-1 text-caption text-truncate">
                   {{ card.subtitle }}
                 </div>
-              </v-tooltip>
-            </v-list-item-content>
-          </v-list-item>
+              </template>
+            </v-tooltip>
+          </div>
           <v-card-actions>
             <v-btn
               v-if="card.phone"
               :href="`tel:${card.phone}`"
               color="primary"
-              class="black--text"
+              variant="elevated"
+              class="text-black"
             >
-              <v-icon left>mdi-phone</v-icon>
+              <v-icon start>mdi-phone</v-icon>
               позвонить
             </v-btn>
             <v-spacer></v-spacer>
@@ -85,7 +71,7 @@
         </v-card>
       </v-col>
     </v-row>
-  </v-main>
+  </div>
 </template>
 
 <script>
@@ -107,19 +93,12 @@ export default {
     menuTitle: '',
     menuRegals: [],
   }),
-  metaInfo() {
-    return {
-      title: this.title,
-    }
-  },
   watch: {
     category: function (newVal) {
-      // watch it
       this.load(newVal)
     },
   },
   created() {
-    //console.log(this.category);
     this.load(this.category)
   },
   methods: {
@@ -131,6 +110,7 @@ export default {
         .then((response) => {
           this.title = response.data.title
           this.cards = response.data.data
+          this.$setTitle(response.data.title)
         })
         .finally(() => {
           this.$nextTick(() => {

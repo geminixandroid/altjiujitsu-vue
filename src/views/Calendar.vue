@@ -1,18 +1,16 @@
 <template>
-  <v-main class="text-center">
+  <div class="text-center">
     <h2>{{ title }}</h2>
     <div class="pa-2">
       <FullCalendar :options="calendarOptions" />
     </div>
     <v-dialog v-model="showInfo" max-width="500px">
       <v-card class="mx-auto">
-        <v-card-title class="primary mb-2">
+        <v-card-title class="bg-primary mb-2 d-flex align-center">
           <v-row>
             <v-col style="word-break: normal">{{ event.title }}</v-col>
             <v-col cols="auto">
-              <v-btn icon @click="showInfo = false">
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
+              <v-icon style="cursor:pointer" @click="showInfo = false">mdi-close</v-icon>
             </v-col>
           </v-row>
         </v-card-title>
@@ -23,18 +21,18 @@
           {{ event.extendedProps.description }}
         </v-card-text>
         <v-card-actions>
-          <v-btn text @click="showInfo = false"
-            ><v-icon left>mdi-close</v-icon>закрыть</v-btn
+          <v-btn variant="text" @click="showInfo = false"
+            ><v-icon start>mdi-close</v-icon>закрыть</v-btn
           >
         </v-card-actions>
       </v-card>
     </v-dialog>
-  </v-main>
+  </div>
 </template>
 
 <script>
 import axios from 'axios'
-import FullCalendar from '@fullcalendar/vue'
+import FullCalendar from '@fullcalendar/vue3'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
 
@@ -77,11 +75,6 @@ export default {
     showInfo: false,
     event: { title: '', extendedProps: {}, start: '', end: '' },
   }),
-  metaInfo() {
-    return {
-      title: this.title,
-    }
-  },
   watch: {
     category: function (newVal) {
       this.load(newVal)
@@ -115,6 +108,7 @@ export default {
         .then((response) => {
           this.title = response.data.title
           this.events = response.data.events
+          this.$setTitle(response.data.title)
         })
         .finally(() => {
           this.$nextTick(() => {

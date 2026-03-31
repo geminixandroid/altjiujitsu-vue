@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
+  },
+  "vueCompilerOptions": {
+    "target": 3.5,
+    "globalTypesPath": "./node_modules/@vue/language-core/types/globalTypes.d.ts"
+  }
+}

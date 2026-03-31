@@ -1,5 +1,5 @@
 <template>
-  <v-main class="text-center">
+  <div class="text-center">
     <v-row>
       <v-col>
         <h1 class="font-weight-bold mb-3 text-uppercase">
@@ -14,7 +14,7 @@
         />
       </v-col>
     </v-row>
-    <v-subheader>Наши направления</v-subheader>
+    <div class="text-subtitle-2 px-4 py-2 text-medium-emphasis">Наши направления</div>
     <v-row>
       <v-col class="text-left">
         <v-card class="ma-2">
@@ -68,7 +68,7 @@
         </v-card>
       </v-col>
     </v-row>
-  </v-main>
+  </div>
 </template>
 
 <script>
@@ -79,6 +79,7 @@ export default {
   name: 'Home',
   mounted() {
     this.startAnimation = true
+    this.$setTitle(null)
     this.$nextTick(() => {
       document.dispatchEvent(new Event('x-app-rendered'))
     })

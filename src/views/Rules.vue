@@ -1,30 +1,30 @@
 <template>
-  <v-main class="text-center">
+  <div class="text-center">
     <h2>{{ title }}</h2>
-    <div class="hidden-screen-only">
+    <div class="d-none">
       <div v-for="tab in tabs" :key="tab.tabname">
         <div v-for="content in tab.tabcontent" :key="content.title">
           {{ content.title }} {{ content.link }}
         </div>
       </div>
     </div>
-    <v-list max-width="400px" class="mx-auto" color="transparent">
-      <v-list-item class="mb-2 mt-2" v-for="pdf in pdfs" :key="pdf.title">
-        <v-list-item-content class="text-center">
-          <v-btn width="400px" outlined :href="pdf.link" target="_blank"
+    <v-list max-width="400px" class="mx-auto bg-transparent">
+      <v-list-item class="mb-2 mt-2 bg-transparent" v-for="pdf in pdfs" :key="pdf.title">
+        <div class="text-center">
+          <v-btn width="400px" variant="outlined" :href="pdf.link" target="_blank"
             >{{ pdf.title }}
-            <v-icon right>mdi-download</v-icon>
+            <v-icon end>mdi-download</v-icon>
           </v-btn>
-        </v-list-item-content>
+        </div>
       </v-list-item>
     </v-list>
-    <v-tabs v-model="tabSwitcher" background-color="primary">
+    <v-tabs v-model="tabSwitcher" bg-color="primary">
       <v-tab v-for="tab in tabs" :key="tab.tabname">
         {{ tab.tabname }}
       </v-tab>
     </v-tabs>
-    <v-tabs-items v-model="tabSwitcher">
-      <v-tab-item v-for="tab in tabs" :key="tab.tabname">
+    <v-window v-model="tabSwitcher">
+      <v-window-item v-for="tab in tabs" :key="tab.tabname">
         <v-row justify="center">
           <v-col
             cols="12"
@@ -44,9 +44,9 @@
             </v-card>
           </v-col>
         </v-row>
-      </v-tab-item>
-    </v-tabs-items>
-  </v-main>
+      </v-window-item>
+    </v-window>
+  </div>
 </template>
 
 <script>
@@ -63,14 +63,9 @@ export default {
   data: () => ({
     title: '',
     pdfs: [],
-    tabSwitcher: null,
+    tabSwitcher: 0,
     tabs: [],
   }),
-  metaInfo() {
-    return {
-      title: this.title,
-    }
-  },
   watch: {
     category: function (newVal) {
       this.load(newVal)
@@ -89,6 +84,7 @@ export default {
           this.title = response.data.title
           this.pdfs = response.data.pdfs
           this.tabs = response.data.tabs
+          this.$setTitle(response.data.title)
         })
         .finally(() => {
           this.$nextTick(() => {
