@@ -1,14 +1,16 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import VueMeta from 'vue-meta'
 import vuetify from './plugins/vuetify'
 
-Vue.config.productionTip = false
-Vue.use(VueMeta)
-new Vue({
-  router,
+const SITE_NAME = 'Алтайская Краевая Федерация Джиу-Джитсу'
 
-  vuetify,
-  render: (h) => h(App),
-}).$mount('#app')
+const app = createApp(App)
+
+app.config.globalProperties.$setTitle = (title) => {
+  document.title = title ? `${title} | ${SITE_NAME}` : `АКФД | ${SITE_NAME}`
+}
+
+app.use(router)
+app.use(vuetify)
+app.mount('#app')

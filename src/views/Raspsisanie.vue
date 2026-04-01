@@ -1,27 +1,29 @@
 <template>
-  <v-main class="text-center">
+  <div class="text-center">
     <h2>{{ title }}</h2>
     {{ address }}
     <v-row
       v-for="(day, index) in days"
-      class="mt-2"
+      class="mt-0"
       :key="day.day"
-      :class="`${index % 2 === 0 ? 'primary darken-1' : 'primary lighten-1'}`"
+      :class="`${index % 2 === 0 ? 'bg-primary-darken-1' : 'bg-primary-lighten-1'}`"
       justify="center"
     >
-      <v-col cols="9" md="3">{{ day.day }}</v-col>
+      <v-col cols="9" md="3" class="text-black d-flex align-center justify-center">{{ day.day }}</v-col>
       <v-col cols="12" md="6">
         <v-row
-          :class="`${index % 2 === 0 ? 'grey lighten-3' : 'grey lighten-2'}`"
+          :class="`${itemIndex % 2 === 0 ? 'bg-grey-lighten-3' : 'bg-grey-lighten-2'}`"
+          class="py-2"
           justify="center"
+          no-gutters
           :key="item.time"
-          v-for="(item, index) in day.rasp"
+          v-for="(item, itemIndex) in day.rasp"
         >
           <v-col>{{ item.time }} </v-col> <v-col>{{ item.trener }}</v-col>
         </v-row>
       </v-col>
     </v-row>
-  </v-main>
+  </div>
 </template>
 
 <script>
@@ -41,19 +43,12 @@ export default {
     address: '',
     days: [],
   }),
-  metaInfo() {
-    return {
-      title: this.title,
-    }
-  },
   watch: {
     category: function (newVal) {
-      // watch it
       this.load(newVal)
     },
   },
   created() {
-    //console.log(this.category);
     this.load(this.category)
   },
   methods: {
@@ -61,10 +56,10 @@ export default {
       axios
         .get(`/data/${category.replace('.html', '')}.json`)
         .then((response) => {
-          //console.log(response.data)
           this.title = response.data.title
           this.days = response.data.data
           this.address = response.data.address
+          this.$setTitle(response.data.title)
         })
         .finally(() => {
           this.$nextTick(() => {

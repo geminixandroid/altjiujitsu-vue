@@ -1,5 +1,5 @@
 <template>
-  <v-main class="text-center">
+  <div class="text-center">
     <h2>{{ title }}</h2>
     <v-card flat max-width="600px" class="mx-auto">
       <v-list>
@@ -10,19 +10,21 @@
           :to="pdf.link"
           target="_blank"
         >
-          <v-icon left>mdi-file</v-icon
-          ><v-list-item-title>{{ pdf.title }}.pdf</v-list-item-title>
+          <template v-slot:prepend>
+            <v-icon>mdi-file</v-icon>
+          </template>
+          <v-list-item-title>{{ pdf.title }}.pdf</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-card>
-  </v-main>
+  </div>
 </template>
 
 <script>
 import axios from 'axios'
 
 export default {
-  name: 'Andidoping',
+  name: 'Antidoping',
   props: {
     category: {
       type: String,
@@ -33,19 +35,12 @@ export default {
     title: '',
     items: [],
   }),
-  metaInfo() {
-    return {
-      title: this.title,
-    }
-  },
   watch: {
     category: function (newVal) {
-      // watch it
       this.load(newVal)
     },
   },
   created() {
-    // console.log(this.category);
     this.load(this.category)
   },
   methods: {
@@ -55,9 +50,9 @@ export default {
           `/data/${category.replace('.html', '')}.json?timestamp=${Date.now()}`,
         )
         .then((response) => {
-          // console.log(response.data)
           this.title = response.data.title
           this.items = response.data.data
+          this.$setTitle(response.data.title)
         })
         .finally(() => {
           this.$nextTick(() => {
