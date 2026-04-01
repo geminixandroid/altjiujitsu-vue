@@ -71,20 +71,17 @@
   </div>
 </template>
 
-<script>
-export default {
-  data: () => ({
-    startAnimation: false,
-  }),
-  name: 'Home',
-  mounted() {
-    this.startAnimation = true
-    this.$setTitle(null)
-    this.$nextTick(() => {
-      document.dispatchEvent(new Event('x-app-rendered'))
-    })
-  },
-}
+<script setup>
+import { ref, nextTick, onMounted } from 'vue'
+import { setTitle } from '@/utils/setTitle'
+
+const startAnimation = ref(false)
+
+onMounted(() => {
+  startAnimation.value = true
+  setTitle(null)
+  nextTick(() => document.dispatchEvent(new Event('x-app-rendered')))
+})
 </script>
 <style scoped>
 @keyframes bounceIn {

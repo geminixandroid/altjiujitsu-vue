@@ -74,58 +74,29 @@
   </div>
 </template>
 
-<script>
-import axios from 'axios'
+<script setup>
+import { ref, toRef } from 'vue'
+import { usePageData } from '@/composables/usePageData'
 
-export default {
-  name: 'Cards',
-  props: {
-    category: {
-      type: String,
-      required: true,
-    },
-  },
-  data: () => ({
-    dialog: false,
-    title: '',
-    cards: [],
-    isMenuShow: false,
-    menuTitle: '',
-    menuRegals: [],
-  }),
-  watch: {
-    category: function (newVal) {
-      this.load(newVal)
-    },
-  },
-  created() {
-    this.load(this.category)
-  },
-  methods: {
-    load(category) {
-      axios
-        .get(
-          `/data/${category.replace('.html', '')}.json?timestamp=${Date.now()}`,
-        )
-        .then((response) => {
-          this.title = response.data.title
-          this.cards = response.data.data
-          this.$setTitle(response.data.title)
-        })
-        .finally(() => {
-          this.$nextTick(() => {
-            document.dispatchEvent(new Event('x-app-rendered'))
-          })
-        })
-    },
-    showMenu(title, regals) {
-      if (regals) {
-        this.isMenuShow = true
-        this.menuTitle = title
-        this.menuRegals = regals
-      }
-    },
-  },
+const props = defineProps({ category: { type: String, required: true } })
+
+const title = ref('')
+const cards = ref([])
+const isMenuShow = ref(false)
+const menuTitle = ref('')
+const menuRegals = ref([])
+
+usePageData(toRef(props, 'category'), (data) => {
+  title.value = data.title
+  cards.value = data.data
+})
+
+function showMenu(cardTitle, regals) {
+  if (regals) {
+    isMenuShow.value = true
+    menuTitle.value = cardTitle
+    menuRegals.value = regals
+  }
 }
 </script>
 

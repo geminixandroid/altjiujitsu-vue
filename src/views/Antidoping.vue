@@ -20,48 +20,19 @@
   </div>
 </template>
 
-<script>
-import axios from 'axios'
+<script setup>
+import { ref, toRef } from 'vue'
+import { usePageData } from '@/composables/usePageData'
 
-export default {
-  name: 'Antidoping',
-  props: {
-    category: {
-      type: String,
-      required: true,
-    },
-  },
-  data: () => ({
-    title: '',
-    items: [],
-  }),
-  watch: {
-    category: function (newVal) {
-      this.load(newVal)
-    },
-  },
-  created() {
-    this.load(this.category)
-  },
-  methods: {
-    load(category) {
-      axios
-        .get(
-          `/data/${category.replace('.html', '')}.json?timestamp=${Date.now()}`,
-        )
-        .then((response) => {
-          this.title = response.data.title
-          this.items = response.data.data
-          this.$setTitle(response.data.title)
-        })
-        .finally(() => {
-          this.$nextTick(() => {
-            document.dispatchEvent(new Event('x-app-rendered'))
-          })
-        })
-    },
-  },
-}
+const props = defineProps({ category: { type: String, required: true } })
+
+const title = ref('')
+const items = ref([])
+
+usePageData(toRef(props, 'category'), (data) => {
+  title.value = data.title
+  items.value = data.data
+})
 </script>
 
 <style scoped></style>

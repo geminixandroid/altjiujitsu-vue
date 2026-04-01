@@ -27,48 +27,19 @@
   </div>
 </template>
 
-<script>
-import axios from 'axios'
+<script setup>
+import { ref, toRef } from 'vue'
+import { usePageData } from '@/composables/usePageData'
 
-export default {
-  name: 'Partners',
-  props: {
-    category: {
-      type: String,
-      required: true,
-    },
-  },
-  data: () => ({
-    title: '',
-    partners: [],
-  }),
-  watch: {
-    category: function (newVal) {
-      this.load(newVal)
-    },
-  },
-  created() {
-    this.load(this.category)
-  },
-  methods: {
-    load(category) {
-      axios
-        .get(
-          `/data/${category.replace('.html', '')}.json?timestamp=${Date.now()}`,
-        )
-        .then((response) => {
-          this.title = response.data.title
-          this.partners = response.data.data
-          this.$setTitle(response.data.title)
-        })
-        .finally(() => {
-          this.$nextTick(() => {
-            document.dispatchEvent(new Event('x-app-rendered'))
-          })
-        })
-    },
-  },
-}
+const props = defineProps({ category: { type: String, required: true } })
+
+const title = ref('')
+const partners = ref([])
+
+usePageData(toRef(props, 'category'), (data) => {
+  title.value = data.title
+  partners.value = data.data
+})
 </script>
 
 <style scoped></style>
