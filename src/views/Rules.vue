@@ -49,51 +49,22 @@
   </div>
 </template>
 
-<script>
-import axios from 'axios'
+<script setup>
+import { ref, toRef } from 'vue'
+import { usePageData } from '@/composables/usePageData'
 
-export default {
-  name: 'Rules',
-  props: {
-    category: {
-      type: String,
-      required: true,
-    },
-  },
-  data: () => ({
-    title: '',
-    pdfs: [],
-    tabSwitcher: 0,
-    tabs: [],
-  }),
-  watch: {
-    category: function (newVal) {
-      this.load(newVal)
-    },
-  },
-  created() {
-    this.load(this.category)
-  },
-  methods: {
-    load(category) {
-      axios
-        .get(
-          `/data/${category.replace('.html', '')}.json?timestamp=${Date.now()}`,
-        )
-        .then((response) => {
-          this.title = response.data.title
-          this.pdfs = response.data.pdfs
-          this.tabs = response.data.tabs
-          this.$setTitle(response.data.title)
-        })
-        .finally(() => {
-          this.$nextTick(() => {
-            document.dispatchEvent(new Event('x-app-rendered'))
-          })
-        })
-    },
-  },
-}
+const props = defineProps({ category: { type: String, required: true } })
+
+const title = ref('')
+const pdfs = ref([])
+const tabs = ref([])
+const tabSwitcher = ref(0)
+
+usePageData(toRef(props, 'category'), (data) => {
+  title.value = data.title
+  pdfs.value = data.pdfs
+  tabs.value = data.tabs
+})
 </script>
 
 <style scoped></style>

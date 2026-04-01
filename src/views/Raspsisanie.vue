@@ -26,49 +26,21 @@
   </div>
 </template>
 
-<script>
-import axios from 'axios'
+<script setup>
+import { ref, toRef } from 'vue'
+import { usePageData } from '@/composables/usePageData'
 
-export default {
-  name: 'Raspisanie',
-  props: {
-    category: {
-      type: String,
-      required: true,
-    },
-  },
-  data: () => ({
-    dialog: false,
-    title: '',
-    address: '',
-    days: [],
-  }),
-  watch: {
-    category: function (newVal) {
-      this.load(newVal)
-    },
-  },
-  created() {
-    this.load(this.category)
-  },
-  methods: {
-    load(category) {
-      axios
-        .get(`/data/${category.replace('.html', '')}.json`)
-        .then((response) => {
-          this.title = response.data.title
-          this.days = response.data.data
-          this.address = response.data.address
-          this.$setTitle(response.data.title)
-        })
-        .finally(() => {
-          this.$nextTick(() => {
-            document.dispatchEvent(new Event('x-app-rendered'))
-          })
-        })
-    },
-  },
-}
+const props = defineProps({ category: { type: String, required: true } })
+
+const title = ref('')
+const address = ref('')
+const days = ref([])
+
+usePageData(toRef(props, 'category'), (data) => {
+  title.value = data.title
+  days.value = data.data
+  address.value = data.address
+})
 </script>
 
 <style scoped></style>

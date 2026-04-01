@@ -30,93 +30,53 @@
   </div>
 </template>
 
-<script>
-import axios from 'axios'
+<script setup>
+import { ref, computed, toRef } from 'vue'
 import FullCalendar from '@fullcalendar/vue3'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
+import { usePageData } from '@/composables/usePageData'
 
-export default {
-  name: 'Raspisanie',
-  components: {
-    FullCalendar,
+const props = defineProps({ category: { type: String, required: true } })
+
+const title = ref('')
+const events = ref([])
+const showInfo = ref(false)
+const event = ref({ title: '', extendedProps: {}, start: '', end: '' })
+
+usePageData(toRef(props, 'category'), (data) => {
+  title.value = data.title
+  events.value = data.events
+})
+
+const calendarOptions = computed(() => ({
+  eventClick: (info) => {
+    event.value = info.event
+    showInfo.value = true
   },
-  props: {
-    category: {
-      type: String,
-      required: true,
-    },
-  },
-  computed: {
-    calendarOptions() {
-      return {
-        eventClick: this.eventClickInfo,
-        events: this.events,
-        firstDay: 1,
-        headerToolbar: {
-          start: 'title',
-          center: '',
-          end: 'today,prev,next',
-        },
-        titleFormat: { year: 'numeric', month: 'long' },
-        height: 'auto',
-        plugins: [dayGridPlugin, interactionPlugin],
-        initialView: 'dayGridMonth',
-        locale: 'ru',
-        buttonText: { today: 'Сегодня' },
-      }
-    },
-  },
-  data: () => ({
-    dialog: false,
-    title: '',
-    address: '',
-    events: [],
-    showInfo: false,
-    event: { title: '', extendedProps: {}, start: '', end: '' },
-  }),
-  watch: {
-    category: function (newVal) {
-      this.load(newVal)
-    },
-  },
-  created() {
-    this.load(this.category)
-  },
-  methods: {
-    getDateStart(date) {
-      if (date) return new Date(date).toLocaleDateString()
-      return ''
-    },
-    getDateEnd(date) {
-      if (date) {
-        const newDate = new Date(date)
-        newDate.setDate(newDate.getDate() - 1)
-        return `- ${newDate.toLocaleDateString()}`
-      }
-      return ''
-    },
-    eventClickInfo(info) {
-      this.event = info.event
-      this.showInfo = true
-    },
-    load(category) {
-      axios
-        .get(
-          `/data/${category.replace('.html', '')}.json?timestamp=${Date.now()}`,
-        )
-        .then((response) => {
-          this.title = response.data.title
-          this.events = response.data.events
-          this.$setTitle(response.data.title)
-        })
-        .finally(() => {
-          this.$nextTick(() => {
-            document.dispatchEvent(new Event('x-app-rendered'))
-          })
-        })
-    },
-  },
+  events: events.value,
+  firstDay: 1,
+  headerToolbar: { start: 'title', center: '', end: 'today,prev,next' },
+  titleFormat: { year: 'numeric', month: 'long' },
+  height: 'auto',
+  plugins: [dayGridPlugin, interactionPlugin],
+  initialView: 'dayGridMonth',
+  locale: 'ru',
+  buttonText: { today: 'Сегодня' },
+}))
+
+function getDateStart(date) {
+  if (date) return new Date(date).toLocaleDateString()
+  return ''
+}
+
+function getDateEnd(date) {
+  if (date) {
+    const newDate = new Date(date)
+    newDate.setDate(newDate.getDate() - 1)
+    return `- ${newDate.toLocaleDateString()}`
+  }
+  return ''
 }
 </script>
 <style>

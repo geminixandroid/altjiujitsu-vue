@@ -53,21 +53,14 @@
   </v-app>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue'
 import Navigation from './components/Navigation'
+import { setTitle } from '@/utils/setTitle'
 
-export default {
-  name: 'App',
-  components: {
-    Navigation,
-  },
-  data: () => ({
-    drawer: false,
-  }),
-  created() {
-    this.$setTitle(null)
-  },
-}
+const drawer = ref(false)
+
+setTitle(null)
 </script>
 
 <style>
