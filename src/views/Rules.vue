@@ -8,7 +8,7 @@
         </div>
       </div>
     </div>
-    <v-list max-width="400px" class="mx-auto bg-transparent">
+    <v-list width="400px" class="mx-auto bg-transparent">
       <v-list-item class="mb-2 mt-2 bg-transparent" v-for="pdf in pdfs" :key="pdf.title">
         <div class="text-center">
           <v-btn width="400px" variant="outlined" :href="pdf.link" target="_blank"
@@ -25,7 +25,7 @@
     </v-tabs>
     <v-window v-model="tabSwitcher">
       <v-window-item v-for="tab in tabs" :key="tab.tabname">
-        <v-row justify="center">
+        <v-row justify="center" class="pa-2">
           <v-col
             cols="12"
             md="3"
@@ -33,13 +33,13 @@
             v-for="rule in tab.tabcontent"
             :key="rule.title"
           >
-            <v-card elevation="2" width="400px" class="ma-auto">
+            <v-card elevation="2" max-width="400px" class="ma-auto">
               <v-card-title>{{ rule.title }}</v-card-title>
               <v-card-subtitle class="text-left">{{
                 rule.subtitle
               }}</v-card-subtitle>
               <v-card-text>
-                <video class="v-main" controls :src="rule.link"></video>
+                <video controls :src="rule.link" style="width:100%;display:block;"></video>
               </v-card-text>
             </v-card>
           </v-col>
