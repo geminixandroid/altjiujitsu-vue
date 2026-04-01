@@ -1,7 +1,7 @@
 <template>
   <div class="text-center">
     <h2>{{ title }}</h2>
-    <v-card width="400px" flat class="mx-auto">
+    <v-card max-width="400px" flat class="mx-auto">
       <v-list>
         <v-list-item
           class="mb-2 mt-2"
