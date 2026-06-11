@@ -42,14 +42,6 @@
         <router-view></router-view>
       </v-container>
     </v-main>
-    <v-footer app>
-      <v-spacer></v-spacer
-      ><v-btn variant="text" class="text-overline" href="mailto:geminixandroid@gmail.com"
-        >разработан: geminixandroid@gmail.com<v-icon size="small" end
-          >mdi-email-outline</v-icon
-        ></v-btn
-      >
-    </v-footer>
   </v-app>
 </template>
 
