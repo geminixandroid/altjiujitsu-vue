@@ -19,13 +19,13 @@
         Алтайская Краевая Федерация Джиу-Джитсу</v-toolbar-title
       >
 
-      <v-btn
+      <!--<v-btn
         href="https://instagram.com/altai_jiu_jitsu_federation"
         target="_blank"
         icon
       >
         <v-icon>mdi-instagram</v-icon>
-      </v-btn>
+      </v-btn>-->
       <v-btn href="https://vk.com/altayjiujitsu" target="_blank" icon
         ><v-icon>mdi-vk</v-icon>
       </v-btn>
